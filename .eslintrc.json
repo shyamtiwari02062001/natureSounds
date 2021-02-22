@@ -1,0 +1,50 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/jsx-uses-react": "error",   
+        "react/jsx-uses-vars": "error" ,
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-trailing-spaces": "error",
+        "no-unused-vars": "error",
+        "func-style": ["error", "expression"],
+        "react/prop-types": [2, { "ignore": ["children"] }],
+        "arrow-parens": ["error", "always"],
+        "no-restricted-imports": ["error", "./component"],
+        "max-len": ["error", { "code": 80 }],
+        "no-restricted-syntax": ["error", "FunctionExpression", "WithStatement", "BinaryExpression[operator=`in`]"],
+        "object-shorthand": "error",
+        "template-curly-spacing": "error",
+        "prefer-const": "error",
+        "no-var": "error"
+    }
+}
