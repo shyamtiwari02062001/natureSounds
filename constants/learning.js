@@ -121,7 +121,11 @@ Indonesian islands of Flores and Rinca. The IUCN thinks that
 its population is around 600 to 1,700 mature individuals.
 The Hawaiian crow is extinct in the wild. Members of the
 same genus as crows, ravens are larger birds with bigger
-bills.`,"Crow Details"]},
+bills.`,"Crow Details",
+	require("../assets/crow.png"),
+	require("../assets/crow.gif"),
+	require("../assets/crow.mp3")
+]},
 1:{0:[
 	"अवाज सुनें","यह एक कौआ है",
 	"प्रजाति              ",
@@ -176,6 +180,10 @@ Corvus corax (आम रैवेन)
 कोरवस ओसिफ्रागस (मछली कौआ)`,
 	"संरक्षण की स्थिति",
 	"इंटरनेशनल यूनियन फॉर कंजर्वेशन ऑफ नेचर (IUCN) के अनुसार, ज्यादातर कौवे खतरे में नहीं हैं। फ्लॉर्स कौवा अपवादों में से एक है। इसे लुप्तप्राय के रूप में सूचीबद्ध किया गया है क्योंकि इसकी आबादी बहुत कम है जो वनों की कटाई के कारण इंडोनेशिया के फ्लोर्स और रिनका द्वीपों पर अपने घर को खतरे में डालती है। IUCN को लगता है कि इसकी आबादी लगभग 600 से 1,700 परिपक्व व्यक्तियों की है। हवाई का कौवा जंगली में विलुप्त है।",
-	"कौआ का विवरण"]}
+	"कौआ का विवरण",
+	require("../assets/crow.png"),
+	require("../assets/crow.gif"),
+	require("../assets/crow.mp3")
+]}
 };
 export default LearningMaterial;

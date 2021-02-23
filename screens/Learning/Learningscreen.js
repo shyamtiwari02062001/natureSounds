@@ -26,7 +26,7 @@ const Learningscreen=(props)=> {
 	// eslint-disable-next-line func-style
 	async function PlaySound() {
 		const { sound } = await Audio.Sound.createAsync(
-			require("../../assets/crow.mp3")
+			Learning[id][number][31]
 		);
 		setSound(sound);
 		setPlaying(true);
@@ -44,6 +44,7 @@ const Learningscreen=(props)=> {
 			}
 			: undefined;
 	}, [sound]);
+	const data=Learning[id][number][29];
 
 	return (
 		<View style={styles.container}>
@@ -90,12 +91,12 @@ const Learningscreen=(props)=> {
 				</TouchableOpacity>
 				{playing === true ? (
 					<Image
-						source={require("../../assets/crow.gif")}
+						source={Learning[id][number][30]}
 						style={{ height: 200, width: 117 }}
 					/>
 				) : (
 					<Image
-						source={require("../../assets/crow.png")}
+						source={data}
 						style={{ height: 200, width: 200 }}
 					/>
 				)}

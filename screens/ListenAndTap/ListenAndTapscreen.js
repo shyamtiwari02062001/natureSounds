@@ -17,9 +17,10 @@ const DashboardScreen = (props) => {
 	const number=0;
 	const [sound, setSound] = useState();
 	const [option, setOption] = useState(null);
+	const [selectedBird, setSelectedBird] = useState(null);
 	async function PlaySound() {
 		const { sound } = await Audio.Sound.createAsync(
-			require("../../assets/koyal.mp3")
+			ListenAndTap[id][number][4]
 		);
 		setSound(sound);
 		await sound.playAsync();
@@ -66,18 +67,25 @@ const DashboardScreen = (props) => {
 							flexDirection: "row",
 							justifyContent: "space-between",
 							alignItems: "center",
-							padding: 10,
 						}}
 					>
-						<TouchableOpacity onPress={()=>{setOption(false);}}>
+						<TouchableOpacity
+							onPress={()=>{
+								setOption(false);
+								setSelectedBird(10);
+							}}
+						>
 							<Image
-								source={require("../../assets/penguin.png")}
+								source={ListenAndTap[id][number][5]}
 								style={{ height: 125, width: 125 }}
 							/>
 						</TouchableOpacity>
-						<TouchableOpacity onPress={()=>{setOption(true);}} >
+						<TouchableOpacity onPress={()=>{
+							setOption(true);
+							setSelectedBird(11);
+						}} >
 							<Image
-								source={require("../../assets/koyal.png")}
+								source={ListenAndTap[id][number][6]}
 								style={{ height: 125, width: 160 }}
 							/>
 						</TouchableOpacity>
@@ -87,12 +95,14 @@ const DashboardScreen = (props) => {
 							flexDirection: "row",
 							justifyContent: "space-around",
 							alignItems: "center",
-							padding: 10,
 						}}
 					>
-						<TouchableOpacity onPress={()=>{setOption(false);}}>
+						<TouchableOpacity onPress={()=>{
+							setOption(false);
+							setSelectedBird(12);
+						}}>
 							<Image
-								source={require("../../assets/peacock.png")}
+								source={ListenAndTap[id][number][7]}
 								style={{ height: 125, width: 125 }}
 							/>
 						</TouchableOpacity>
@@ -102,18 +112,22 @@ const DashboardScreen = (props) => {
 							flexDirection: "row",
 							justifyContent: "space-between",
 							alignItems: "center",
-							padding: 10,
 						}}
 					>
-						<TouchableOpacity onPress={()=>{setOption(false);}}>
+						<TouchableOpacity onPress={()=>{
+							setOption(false);
+							setSelectedBird(13);
+						}}>
 							<Image
-								source={require("../../assets/crow.png")}
+								source={ListenAndTap[id][number][8]}
 								style={{ height: 125, width: 125 }}
 							/>
 						</TouchableOpacity>
-						<TouchableOpacity onPress={()=>{setOption(false);}}>
+						<TouchableOpacity onPress={()=>{
+							setOption(false);
+							setSelectedBird(14);}}>
 							<Image
-								source={require("../../assets/owl.png")}
+								source={ListenAndTap[id][number][9]}
 								style={{ height: 125, width: 125 }}
 							/>
 						</TouchableOpacity>
@@ -160,6 +174,9 @@ const DashboardScreen = (props) => {
 					</TouchableOpacity>
 				</View>
 				<View>
+					<Text style={styles.heading}>
+						{ListenAndTap[id][number][selectedBird]}
+					</Text>
 					{(option===true&&option!==null)&&
                     <Text style={styles.success}>{ListenAndTap[id][number][2]}
                     </Text>}
@@ -167,22 +184,20 @@ const DashboardScreen = (props) => {
                     <Text style={styles.error}>{ListenAndTap[id][number][3]}
                     </Text>}
 				</View>
+				<View style={styles.footer}>
+					<TouchableOpacity><Text>
+						{ListenAndTap[id][number][15]}
+					</Text></TouchableOpacity>
+					<TouchableOpacity><Text>
+						{ListenAndTap[id][number][16]}
+					</Text></TouchableOpacity>
+				</View>
 			</LinearGradient>
 		</View>
 	);
 };
 
 const styles = StyleSheet.create({
-	text: {
-		fontFamily: "serif",
-		fontSize: 30,
-		fontWeight: "bold",
-		paddingLeft: 40,
-		paddingRight: 40,
-		padding: 10,
-		color: "white",
-		textAlign: "center",
-	},
 	englishText: {
 		fontSize: 20,
 		fontWeight: "bold",
@@ -215,6 +230,10 @@ const styles = StyleSheet.create({
 		textAlign:"center",
 		marginTop:20,
 		color:"black"
+	},
+	footer:{
+		flexDirection:"row",
+		justifyContent:"space-around"
 	}
 });
 DashboardScreen.propTypes={
