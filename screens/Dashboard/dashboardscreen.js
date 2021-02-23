@@ -1,20 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import {
 	View,
 	Text,
 	Dimensions,
 	TouchableOpacity,
 	StyleSheet,
-	ScrollView
+	ScrollView,
+	Modal,
+	AsyncStorage
 } from "react-native";
 import LanguageContext from "../../context/LanguageContext";
 import DashboardData from "../../constants/Dashboard";
-import SelectGame from "../../constants/SelectGame";
 import PropTypes from "prop-types";
-
+import Languages from "../../constants/language";
 const DashboardScreen = (props) => {
+	const [modalVisible, setModalVisible] = useState(false);
 	const {
-		id
+		id,
+		setId
 	} = React.useContext(LanguageContext);
 	const callPage=(index)=>{
 		if(index===0){
@@ -24,9 +27,47 @@ const DashboardScreen = (props) => {
 			props.navigation.navigate("ListenTap");
 		}
 	};
+	const storeData = async (value) => {
+		try {
+			await AsyncStorage.setItem("@storage_Key", value);
+		} catch (e) {
+			console.log(e);
+		}
+	};
+	console.log(id);
 	return(
 		<View style={{backgroundColor:"#7CFFCB",flex:1}}>
-			<Text style={styles.language}>{SelectGame[id]}</Text>
+			<TouchableOpacity  onPress={() => setModalVisible(true)}>
+				<Text style={styles.language}>Select Language</Text>
+			</TouchableOpacity>
+
+			<Modal
+				animationType="slide"
+				transparent={true}
+				visible={modalVisible}
+				onRequestClose={() => {
+					setModalVisible(!modalVisible);
+				}}
+			>
+				<View style={styles.centeredView}>
+					<View style={styles.modalView}>
+						<ScrollView>
+							{Languages.map((lan,index)=>
+								<TouchableOpacity
+									key={index}
+									onPress={()=>{
+										storeData(`${index}`);
+										setId(index);
+										setModalVisible(!modalVisible);
+									}}
+								>
+									<Text style={styles.language}>{lan}</Text>
+								</TouchableOpacity>
+							)}
+						</ScrollView>
+					</View>
+				</View>
+			</Modal>
 			<ScrollView style={styles.container}>
 				{DashboardData[id].map((lan,index)=>
 					<View style={styles.buttonContainer} key={index}>
@@ -53,8 +94,6 @@ const styles = StyleSheet.create({
 	language:{
 		fontSize:35,
 		textAlign:"center",
-		marginTop:"10%",
-		marginBottom:"10%"
 	},
 	buttonContainer:{
 		flex:1,
@@ -71,8 +110,29 @@ const styles = StyleSheet.create({
 	text: {
 		fontSize:25,
 		textAlign:"center",
-		color:"white"
-	}
+		color:"white",
+	},
+	centeredView: {
+		flex: 1,
+		justifyContent: "center",
+		alignItems: "center",
+		marginTop:0
+	},
+	modalView: {
+		backgroundColor:"white",
+		margin: 20,
+		borderRadius: 40,
+		padding: 35,
+		alignItems: "center",
+		shadowColor: "#000",
+		shadowOffset: {
+			width: 0,
+			height: 2
+		},
+		shadowOpacity: 0.25,
+		shadowRadius: 4,
+		elevation: 5
+	},
 });
 DashboardScreen.propTypes={
 	navigation:PropTypes.any,

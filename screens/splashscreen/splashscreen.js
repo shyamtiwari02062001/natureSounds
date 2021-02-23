@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {
 	StyleSheet,
 	View,
@@ -8,16 +8,33 @@ import {
 import * as Animatable	from "react-native-animatable";
 import PropTypes from "prop-types";
 import { useFonts } from "expo-font";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import LanguageContext from "../../context/LanguageContext";
 const SplashScreen = (props) => {
+	const {
+		setId
+	} = React.useContext(LanguageContext);
 	setTimeout(() => {
-		props.navigation.replace("Language");
-	}, 5000);
+		props.navigation.replace("Dashboard");
+	}, 2000);
 	const [loaded] = useFonts({
 		FrederickatheGreat: require(
 			"../../assets/fonts/FrederickatheGreat-Regular.ttf"
 		),
 	});
-
+	const getData = async () => {
+		try {
+			const value = await AsyncStorage.getItem("@storage_Key");
+			if(value !== null) {
+				setId(value);
+			}
+		} catch(e) {
+			console.log(e);
+		}
+	};
+	useEffect(()=>{
+		getData();
+	},[]);
 	if (!loaded) {
 		return null;
 	}
@@ -34,7 +51,7 @@ const SplashScreen = (props) => {
 						animation="bounceInLeft"
 						style={styles.headingText}
 					>
-            Nature Sounds
+            Animopedia
 					</Animatable.Text>
 				</View>
 			</ImageBackground>
