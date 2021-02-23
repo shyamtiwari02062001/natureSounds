@@ -1,7 +1,7 @@
 const DashboardConstant={0:
 	[
-		"Learning Material",
-		"Listen & Tap",
+		"Birds",
+		"Animals",
 	],
 1:
 	[

@@ -13,20 +13,15 @@ import LanguageContext from "../../context/LanguageContext";
 import DashboardData from "../../constants/Dashboard";
 import PropTypes from "prop-types";
 import Languages from "../../constants/language";
-const DashboardScreen = (props) => {
+import BirdsConstant from "../../constants/Games";
+const DashboardScreen = () => {
 	const [modalVisible, setModalVisible] = useState(false);
 	const {
 		id,
-		setId
+		setId,
+		gameId,
+		setGameId
 	} = React.useContext(LanguageContext);
-	const callPage=(index)=>{
-		if(index===0){
-			props.navigation.navigate("Learning");
-		}
-		else if(index===1){
-			props.navigation.navigate("ListenTap");
-		}
-	};
 	const storeData = async (value) => {
 		try {
 			await AsyncStorage.setItem("@storage_Key", value);
@@ -34,11 +29,18 @@ const DashboardScreen = (props) => {
 			console.log(e);
 		}
 	};
-	console.log(id);
 	return(
 		<View style={{backgroundColor:"#7CFFCB",flex:1}}>
-			<TouchableOpacity  onPress={() => setModalVisible(true)}>
-				<Text style={styles.language}>Select Language</Text>
+			<TouchableOpacity
+				style={{marginTop:20}}
+				onPress={() => setModalVisible(true)}
+			>
+				{(id===null)&&<Text
+					style={styles.language}>Select Language
+				</Text>}
+				{(id!==null)&&<Text
+					style={styles.language}>{Languages[id]}
+				</Text>}
 			</TouchableOpacity>
 
 			<Modal
@@ -51,7 +53,9 @@ const DashboardScreen = (props) => {
 			>
 				<View style={styles.centeredView}>
 					<View style={styles.modalView}>
-						<ScrollView>
+						<ScrollView
+							showsVerticalScrollIndicator={false}
+							showsHorizontalScrollIndicator={false}>
 							{Languages.map((lan,index)=>
 								<TouchableOpacity
 									key={index}
@@ -61,20 +65,34 @@ const DashboardScreen = (props) => {
 										setModalVisible(!modalVisible);
 									}}
 								>
-									<Text style={styles.language}>{lan}</Text>
+									<Text style={styles.modalcontent}>
+										{lan}
+									</Text>
 								</TouchableOpacity>
 							)}
 						</ScrollView>
 					</View>
 				</View>
 			</Modal>
-			<ScrollView style={styles.container}>
+			<ScrollView style={styles.container}
+				showsVerticalScrollIndicator={false}
+				showsHorizontalScrollIndicator={false}>
 				{DashboardData[id].map((lan,index)=>
 					<View style={styles.buttonContainer} key={index}>
 						<TouchableOpacity style={styles.button}
-							onPress={()=>{callPage(index);}}
+							onPress={()=>{setGameId(index);}}
 						>
 							<Text style={styles.text}>{lan}</Text>
+							{(gameId===index)&&
+							BirdsConstant[gameId].map((lan,index)=>
+								<View style={{flex:1,alignContent:'center'}} key={index}>
+									<TouchableOpacity
+										onPress={()=>{}}
+									>
+										<Text style={styles.text}>{lan}</Text>
+									</TouchableOpacity>
+								</View>
+							)}
 						</TouchableOpacity>
 					</View>
 				)}
@@ -98,14 +116,14 @@ const styles = StyleSheet.create({
 	buttonContainer:{
 		flex:1,
 		marginBottom:"10%",
-		alignItems:"center",
+		alignItems:"center",padding:10
 	},
 	button:{
 		backgroundColor:"#050637",
-		height:50,
 		width:"80%",
 		justifyContent:"center",
-		borderRadius:50
+		borderRadius:50,
+		padding:10
 	},
 	text: {
 		fontSize:25,
@@ -133,6 +151,11 @@ const styles = StyleSheet.create({
 		shadowRadius: 4,
 		elevation: 5
 	},
+	modalcontent:{
+		fontSize:20,
+		textAlign:"center",
+		padding:10
+	}
 });
 DashboardScreen.propTypes={
 	navigation:PropTypes.any,

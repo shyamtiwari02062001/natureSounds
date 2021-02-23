@@ -3,19 +3,19 @@ import {
 	StyleSheet,
 	View,
 	Dimensions,
-	ImageBackground
+	ImageBackground,
+	AsyncStorage
 } from "react-native";
 import * as Animatable	from "react-native-animatable";
 import PropTypes from "prop-types";
 import { useFonts } from "expo-font";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import LanguageContext from "../../context/LanguageContext";
 const SplashScreen = (props) => {
 	const {
 		setId
 	} = React.useContext(LanguageContext);
 	setTimeout(() => {
-		props.navigation.replace("Dashboard");
+		props.navigation.navigate("Dashboard");
 	}, 2000);
 	const [loaded] = useFonts({
 		FrederickatheGreat: require(
