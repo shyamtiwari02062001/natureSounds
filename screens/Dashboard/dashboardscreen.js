@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import {
 	View,
 	Text,
@@ -7,21 +7,16 @@ import {
 	StyleSheet,
 	ScrollView,
 	Modal,
-	AsyncStorage
+	AsyncStorage,
+	Image
 } from "react-native";
-import LanguageContext from "../../context/LanguageContext";
 import DashboardData from "../../constants/Dashboard";
 import PropTypes from "prop-types";
+import * as Animatable from "react-native-animatable";
 import Languages from "../../constants/language";
-import BirdsConstant from "../../constants/Games";
-const DashboardScreen = () => {
+const DashboardScreen = (props) => {
 	const [modalVisible, setModalVisible] = useState(false);
-	const {
-		id,
-		setId,
-		gameId,
-		setGameId
-	} = React.useContext(LanguageContext);
+	const [id,setId]=useState(0);
 	const storeData = async (value) => {
 		try {
 			await AsyncStorage.setItem("@storage_Key", value);
@@ -29,19 +24,42 @@ const DashboardScreen = () => {
 			console.log(e);
 		}
 	};
+	const getData = async () => {
+		try {
+			const value = await AsyncStorage.getItem("@storage_Key");
+			if(value !== null) {
+				setId(value);
+			}
+		} catch(e) {
+			console.log(e);
+		}
+	};
+	useEffect(()=>{
+		getData();
+	});
+	const redirect=(index)=>{
+		if(index===0){
+			props.navigation.navigate("BirdList");
+		}
+		if(index===1){
+			props.navigation.navigate("AnimalList");
+		}
+	};
 	return(
 		<View style={{backgroundColor:"#7CFFCB",flex:1}}>
-			<TouchableOpacity
-				style={{marginTop:20}}
-				onPress={() => setModalVisible(true)}
-			>
-				{(id===null)&&<Text
-					style={styles.language}>Select Language
-				</Text>}
-				{(id!==null)&&<Text
-					style={styles.language}>{Languages[id]}
-				</Text>}
-			</TouchableOpacity>
+			<View style={{flex:1}}>
+				<TouchableOpacity
+					style={{marginTop:20}}
+					onPress={() => setModalVisible(true)}
+				>
+					{(id===null)&&<Text
+						style={styles.language}>Select Language
+					</Text>}
+					{(id!==null)&&<Text
+						style={styles.language}>{Languages[id]}
+					</Text>}
+				</TouchableOpacity>
+			</View>
 
 			<Modal
 				animationType="slide"
@@ -74,36 +92,39 @@ const DashboardScreen = () => {
 					</View>
 				</View>
 			</Modal>
-			<ScrollView style={styles.container}
-				showsVerticalScrollIndicator={false}
-				showsHorizontalScrollIndicator={false}>
-				{DashboardData[id].map((lan,index)=>
-					<View style={styles.buttonContainer} key={index}>
-						<TouchableOpacity style={styles.button}
-							onPress={()=>{setGameId(index);}}
-						>
-							<Text style={styles.text}>{lan}</Text>
-							{(gameId===index)&&
-							BirdsConstant[gameId].map((lan,index)=>
-								<View style={{flex:1,alignContent:'center'}} key={index}>
-									<TouchableOpacity
-										onPress={()=>{}}
-									>
-										<Text style={styles.text}>{lan}</Text>
-									</TouchableOpacity>
-								</View>
-							)}
-						</TouchableOpacity>
-					</View>
-				)}
-			</ScrollView>
+			<Animatable.View
+				animation="slideInUp"
+				style={styles.container}>
+				<ScrollView
+					showsVerticalScrollIndicator={false}
+					showsHorizontalScrollIndicator={false}>
+					{DashboardData[id].map((lan,index)=>
+						<View style={styles.buttonContainer} key={index}>
+							<TouchableOpacity style={styles.button}
+								onPress={()=>{redirect(index);}}
+							>
+								<Image source={lan[1]}
+									style={{
+										height:150,
+										width:200,
+										alignItems:"center"
+									}}
+								/>
+								<Text style={styles.text}>{lan[0]}</Text>
+							</TouchableOpacity>
+						</View>
+					)}
+				</ScrollView>
+			</Animatable.View>
 		</View>
 	);
 };
 const styles = StyleSheet.create({
 	container:{
-		backgroundColor:"#7CFFCB",
-		marginBottom:"40%"
+		flex:3,
+		backgroundColor:"white",
+		borderTopLeftRadius:50,
+		borderTopRightRadius:50
 	},
 	gradient: {
 		width:Dimensions.get("window").width,
@@ -115,10 +136,12 @@ const styles = StyleSheet.create({
 	},
 	buttonContainer:{
 		flex:1,
-		marginBottom:"10%",
+		flexDirection:"row",
+		justifyContent:"center",
 		alignItems:"center",padding:10
 	},
 	button:{
+		alignItems:"center",
 		backgroundColor:"#050637",
 		width:"80%",
 		justifyContent:"center",
@@ -127,8 +150,8 @@ const styles = StyleSheet.create({
 	},
 	text: {
 		fontSize:25,
-		textAlign:"center",
 		color:"white",
+		textAlign:"center"
 	},
 	centeredView: {
 		flex: 1,
@@ -155,6 +178,11 @@ const styles = StyleSheet.create({
 		fontSize:20,
 		textAlign:"center",
 		padding:10
+	},
+	innerButton:{
+		flex:1,
+		borderTopColor:"white",
+		borderTopWidth:2
 	}
 });
 DashboardScreen.propTypes={

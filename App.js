@@ -3,20 +3,32 @@ import{ NavigationContainer }	from	"@react-navigation/native";
 import{ createStackNavigator }	from	"@react-navigation/stack";
 import SplashScreen	from	"./screens/splashscreen/splashscreen";
 import DashboardScreen from "./screens/Dashboard/dashboardscreen";
-import {LanguageProvider} from "./context/LanguageContext";
+import BirdsListScreen from "./screens/BirdsList/BirdsListScreen";
+import AnimalListScreen from "./screens/AnimalList/AnimalListScreen";
+import BirdsLearningScreen from "./screens/BirdLearning/BirdsLearningscreen";
+import AnimalsLearningScreen
+	from "./screens/AnimalLearning/AnimalLearningScreen";
 const Stack = createStackNavigator();
 const  App=()=> {
 	return (
-		<LanguageProvider>
-			<NavigationContainer>
-				<Stack.Navigator screenOptions={{headerShown: false,}}
-					initialRouteName="Splash"
-				>
-					<Stack.Screen name="Splash"	component={SplashScreen}/>
-					<Stack.Screen name="Dashboard" component={DashboardScreen}/>
-				</Stack.Navigator>
-			</NavigationContainer>
-		</LanguageProvider>
+		<NavigationContainer>
+			<Stack.Navigator screenOptions={{headerShown: false,}}
+				initialRouteName="Splash"
+			>
+				<Stack.Screen name="Splash"	component={SplashScreen}/>
+				<Stack.Screen name="Dashboard" component={DashboardScreen}/>
+				<Stack.Screen name="BirdList" component={BirdsListScreen}/>
+				<Stack.Screen name="AnimalList"
+					component={AnimalListScreen}
+				/>
+				<Stack.Screen name="BirdLearning"
+					component={BirdsLearningScreen}
+				/>
+				<Stack.Screen name="AnimalLearning"
+					component={AnimalsLearningScreen}
+				/>
+			</Stack.Navigator>
+		</NavigationContainer>
 	);
 };
 

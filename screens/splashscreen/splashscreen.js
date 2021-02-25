@@ -1,19 +1,14 @@
-import React,{useEffect} from "react";
+import React from "react";
 import {
 	StyleSheet,
 	View,
 	Dimensions,
 	ImageBackground,
-	AsyncStorage
 } from "react-native";
 import * as Animatable	from "react-native-animatable";
 import PropTypes from "prop-types";
 import { useFonts } from "expo-font";
-import LanguageContext from "../../context/LanguageContext";
 const SplashScreen = (props) => {
-	const {
-		setId
-	} = React.useContext(LanguageContext);
 	setTimeout(() => {
 		props.navigation.navigate("Dashboard");
 	}, 2000);
@@ -22,19 +17,6 @@ const SplashScreen = (props) => {
 			"../../assets/fonts/FrederickatheGreat-Regular.ttf"
 		),
 	});
-	const getData = async () => {
-		try {
-			const value = await AsyncStorage.getItem("@storage_Key");
-			if(value !== null) {
-				setId(value);
-			}
-		} catch(e) {
-			console.log(e);
-		}
-	};
-	useEffect(()=>{
-		getData();
-	},[]);
 	if (!loaded) {
 		return null;
 	}
