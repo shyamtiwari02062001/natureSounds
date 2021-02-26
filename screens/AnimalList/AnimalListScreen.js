@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
 		fontSize:18
 	},
 	view:{padding:10,flex:1,alignItems:"center"},
-	shape:{backgroundColor:"#766A65",borderRadius:50}
+	shape:{backgroundColor:"teal",borderRadius:50}
 });
 AnimalListScreen.propTypes={
 	navigation:PropTypes.any,

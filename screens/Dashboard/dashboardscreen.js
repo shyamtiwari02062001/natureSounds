@@ -93,27 +93,62 @@ const DashboardScreen = (props) => {
 				</View>
 			</Modal>
 			<Animatable.View
-				animation="slideInUp"
+				animation="bounceInUp"
+				duration={3000}
 				style={styles.container}>
 				<ScrollView
 					showsVerticalScrollIndicator={false}
 					showsHorizontalScrollIndicator={false}>
-					{DashboardData[id].map((lan,index)=>
-						<View style={styles.buttonContainer} key={index}>
-							<TouchableOpacity style={styles.button}
-								onPress={()=>{redirect(index);}}
-							>
-								<Image source={lan[1]}
-									style={{
-										height:150,
-										width:200,
-										alignItems:"center"
-									}}
-								/>
-								<Text style={styles.text}>{lan[0]}</Text>
-							</TouchableOpacity>
+					<View style={styles.view}>
+						<View>
+							{DashboardData[id].map((lan,index)=>
+								(index%2==0)&&
+								<View
+									style={styles.buttonContainer}
+									key={index}>
+									<TouchableOpacity style={styles.button}
+										onPress={()=>{redirect(index);}}
+									>
+										<Image source={lan[1]}
+											style={{
+												height:100,
+												width:100,
+												alignItems:"center"
+											}}
+										/>
+										<Text
+											style={styles.text}>
+											{lan[0]}
+										</Text>
+									</TouchableOpacity>
+								</View>
+							)}
 						</View>
-					)}
+						<View>
+							{DashboardData[id].map((lan,index)=>
+								(index%2!==0)&&
+								<View
+									style={styles.buttonContainer}
+									key={index}>
+									<TouchableOpacity style={styles.button}
+										onPress={()=>{redirect(index);}}
+									>
+										<Image source={lan[1]}
+											style={{
+												height:100,
+												width:100,
+												alignItems:"center"
+											}}
+										/>
+										<Text
+											style={styles.text}>
+											{lan[0]}
+										</Text>
+									</TouchableOpacity>
+								</View>
+							)}
+						</View>
+					</View>
 				</ScrollView>
 			</Animatable.View>
 		</View>
@@ -121,10 +156,10 @@ const DashboardScreen = (props) => {
 };
 const styles = StyleSheet.create({
 	container:{
-		flex:3,
+		flex:2,
 		backgroundColor:"white",
 		borderTopLeftRadius:50,
-		borderTopRightRadius:50
+		borderTopRightRadius:50,
 	},
 	gradient: {
 		width:Dimensions.get("window").width,
@@ -142,11 +177,10 @@ const styles = StyleSheet.create({
 	},
 	button:{
 		alignItems:"center",
-		backgroundColor:"#050637",
-		width:"80%",
+		backgroundColor:"teal",
 		justifyContent:"center",
 		borderRadius:50,
-		padding:10
+		padding:20
 	},
 	text: {
 		fontSize:25,
@@ -183,6 +217,11 @@ const styles = StyleSheet.create({
 		flex:1,
 		borderTopColor:"white",
 		borderTopWidth:2
+	},
+	view:{
+		marginTop:"5%",
+		flexDirection:"row",
+		justifyContent:"space-around"
 	}
 });
 DashboardScreen.propTypes={

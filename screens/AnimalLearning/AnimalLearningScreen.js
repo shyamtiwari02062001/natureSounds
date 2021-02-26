@@ -68,6 +68,7 @@ const AnimalLearningscreen=(props)=> {
 				style={{
 					flex: 1,
 					width: Dimensions.get("window").width,
+					height: Dimensions.get("window").height,
 					alignItems: "center",
 					justifyContent: "space-evenly",
 				}}
@@ -107,7 +108,7 @@ const AnimalLearningscreen=(props)=> {
 				{playing === true ? (
 					<Image
 						source={Learning[id][AnimalName][30]}
-						style={{ height: 200, width: 117 }}
+						style={{ height: 200, width: 200 }}
 					/>
 				) : (
 					<Image

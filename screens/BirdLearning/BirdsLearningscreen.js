@@ -68,6 +68,7 @@ const BirdsLearningscreen=(props)=> {
 				style={{
 					flex: 1,
 					width: Dimensions.get("window").width,
+					height: Dimensions.get("window").height,
 					alignItems: "center",
 					justifyContent: "space-evenly",
 				}}

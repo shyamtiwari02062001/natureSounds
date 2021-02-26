@@ -1,24 +1,58 @@
 const AnimalList={0:[
 	["Dog",require("../assets/dog.png")],
 	["Cat",require("../assets/cat.png")],
-	["Dog",require("../assets/dog.png")],
-	["Cat",require("../assets/cat.png")],
-	["Dog",require("../assets/dog.png")],
-	["Cat",require("../assets/cat.png")],
-	["Dog",require("../assets/dog.png")],
-	["Cat",require("../assets/cat.png")],
-	["Dog",require("../assets/dog.png")],
-	["Cat",require("../assets/cat.png")],
-	["Dog",require("../assets/dog.png")],
-	["Cat",require("../assets/cat.png")],
-	["Dog",require("../assets/dog.png")],
-	["Cat",require("../assets/cat.png")],
-	["Dog",require("../assets/dog.png")],
-	["Cat",require("../assets/cat.png")],
-	["Dog",require("../assets/dog.png")],
-	["Cat",require("../assets/cat.png")],
-	["Dog",require("../assets/dog.png")],
-	["Cat",require("../assets/cat.png")],
+],
+1:[
+	["कुत्ता",require("../assets/dog.png")],
+	["बिल्ली",require("../assets/cat.png")],
+],
+2:[
+	["কুকুর",require("../assets/dog.png")],
+	["বিড়াল",require("../assets/cat.png")],
+],
+3:[
+	["કૂતરો",require("../assets/dog.png")],
+	["બિલાડી",require("../assets/cat.png")],
+],
+4:[
+	["ನಾಯಿ",require("../assets/dog.png")],
+	["ಬೆಕ್ಕು",require("../assets/cat.png")],
+],
+5:[
+	["നായ",require("../assets/dog.png")],
+	["പൂച്ച",require("../assets/cat.png")],
+],
+6:[
+	["कुत्रा",require("../assets/dog.png")],
+	["मांजर",require("../assets/cat.png")],
+],
+7:[
+	["कुकुर",require("../assets/dog.png")],
+	["बिरालो",require("../assets/cat.png")],
+],
+8:[
+	["କୁକୁର",require("../assets/dog.png")],
+	["ବିଲେଇ",require("../assets/cat.png")],
+],
+9:[
+	["ਕੁੱਤਾ",require("../assets/dog.png")],
+	["ਬਿੱਲੀ",require("../assets/cat.png")],
+],
+10:[
+	["ڪتو",require("../assets/dog.png")],
+	["ٻلي",require("../assets/cat.png")],
+],
+11:[
+	["நாய்",require("../assets/dog.png")],
+	["பூனை",require("../assets/cat.png")],
+],
+12:[
+	["కుక్క",require("../assets/dog.png")],
+	["పిల్లి",require("../assets/cat.png")],
+],
+13:[
+	["کتا",require("../assets/dog.png")],
+	["کیٹ",require("../assets/cat.png")],
 ],
 };
 export default AnimalList;
