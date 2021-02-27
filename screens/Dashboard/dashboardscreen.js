@@ -44,6 +44,12 @@ const DashboardScreen = (props) => {
 		if(index===1){
 			props.navigation.navigate("AnimalList");
 		}
+		if(index===2){
+			props.navigation.navigate("OddOneOut");
+		}
+		if(index===3){
+			props.navigation.navigate("JumbledWords");
+		}
 	};
 	return(
 		<View style={{backgroundColor:"#7CFFCB",flex:1}}>
@@ -96,11 +102,11 @@ const DashboardScreen = (props) => {
 				animation="bounceInUp"
 				duration={3000}
 				style={styles.container}>
-				<ScrollView
+				<ScrollView style={{marginTop:"3%"}}
 					showsVerticalScrollIndicator={false}
 					showsHorizontalScrollIndicator={false}>
 					<View style={styles.view}>
-						<View>
+						<View style={{alignItems:"center"}}>
 							{DashboardData[id].map((lan,index)=>
 								(index%2==0)&&
 								<View
@@ -124,7 +130,7 @@ const DashboardScreen = (props) => {
 								</View>
 							)}
 						</View>
-						<View>
+						<View style={{alignItems:"center"}}>
 							{DashboardData[id].map((lan,index)=>
 								(index%2!==0)&&
 								<View
@@ -156,7 +162,7 @@ const DashboardScreen = (props) => {
 };
 const styles = StyleSheet.create({
 	container:{
-		flex:2,
+		flex:4.5,
 		backgroundColor:"white",
 		borderTopLeftRadius:50,
 		borderTopRightRadius:50,
@@ -173,7 +179,8 @@ const styles = StyleSheet.create({
 		flex:1,
 		flexDirection:"row",
 		justifyContent:"center",
-		alignItems:"center",padding:10
+		alignItems:"center",padding:10,
+		width:"50%"
 	},
 	button:{
 		alignItems:"center",
@@ -221,7 +228,8 @@ const styles = StyleSheet.create({
 	view:{
 		marginTop:"5%",
 		flexDirection:"row",
-		justifyContent:"space-around"
+		justifyContent:"space-around",
+		alignItems:"center"
 	}
 });
 DashboardScreen.propTypes={

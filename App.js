@@ -8,6 +8,8 @@ import AnimalListScreen from "./screens/AnimalList/AnimalListScreen";
 import BirdsLearningScreen from "./screens/BirdLearning/BirdsLearningscreen";
 import AnimalsLearningScreen
 	from "./screens/AnimalLearning/AnimalLearningScreen";
+import OddOneOutScreen from "./screens/OddOneOut/OddOneOutScreen";
+import JumbledWords from "./screens/jumbledWords/JumbledWordsScreen";
 const Stack = createStackNavigator();
 const  App=()=> {
 	return (
@@ -26,6 +28,12 @@ const  App=()=> {
 				/>
 				<Stack.Screen name="AnimalLearning"
 					component={AnimalsLearningScreen}
+				/>
+				<Stack.Screen name="OddOneOut"
+					component={OddOneOutScreen}
+				/>
+				<Stack.Screen name="JumbledWords"
+					component={JumbledWords}
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>

@@ -2,11 +2,16 @@ const DashboardConstant={0:
 	[
 		["Birds",require("../assets/bird.png")],
 		["Animals",require("../assets/animal.png")],
+		["Odd one out",require("../assets/oddoneout.png")],
+		["Jumbled Words",require("../assets/jumbledWords.png")],
+		["Turn Around",require("../assets/turnAround.png")],
+		["Listen",require("../assets/listen.png")],
 
 	],
 1:[
 	["पक्षियों",require("../assets/bird.png")],
 	["जानवर",require("../assets/animal.png")],
+	["बेमेल",require("../assets/oddoneout.png")],
 ],
 2:[
 	["পাখি",require("../assets/bird.png")],
