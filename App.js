@@ -10,6 +10,8 @@ import AnimalsLearningScreen
 	from "./screens/AnimalLearning/AnimalLearningScreen";
 import OddOneOutScreen from "./screens/OddOneOut/OddOneOutScreen";
 import JumbledWords from "./screens/jumbledWords/JumbledWordsScreen";
+import TurnAroundScreen from "./screens/turnAround/TurnAroundScreen";
+import ListenScreen from "./screens/listen/listenScreen";
 const Stack = createStackNavigator();
 const  App=()=> {
 	return (
@@ -34,6 +36,12 @@ const  App=()=> {
 				/>
 				<Stack.Screen name="JumbledWords"
 					component={JumbledWords}
+				/>
+				<Stack.Screen name="TurnAround"
+					component={TurnAroundScreen}
+				/>
+				<Stack.Screen name="Listen"
+					component={ListenScreen}
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>

@@ -50,6 +50,12 @@ const DashboardScreen = (props) => {
 		if(index===3){
 			props.navigation.navigate("JumbledWords");
 		}
+		if(index===4){
+			props.navigation.navigate("TurnAround");
+		}
+		if(index===5){
+			props.navigation.navigate("Listen");
+		}
 	};
 	return(
 		<View style={{backgroundColor:"#7CFFCB",flex:1}}>
