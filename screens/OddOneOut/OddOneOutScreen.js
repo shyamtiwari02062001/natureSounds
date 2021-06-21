@@ -1,8 +1,20 @@
 import React,{useState,useEffect} from "react";
-import {View,Text,ImageBackground,StyleSheet,Image,AsyncStorage,TouchableOpacity} from "react-native";
+import {
+	View,
+	Text,
+	StyleSheet,
+	AsyncStorage,
+	Dimensions,
+	TouchableOpacity,
+	Image
+} from "react-native";
+import PropTypes from "prop-types";
+import { LinearGradient } from "expo-linear-gradient";
 import oddoneout from "../../constants/OddOneOut";
-const OddOneOutScreen = () =>{
+import Buttons from "./Button";
+const OddOneOutScreen = (props) =>{
 	const [id,setId]=useState(0);
+	const [gameLevel,setGameLevel]=useState(0);
 	const getData = async () => {
 		try {
 			const value = await AsyncStorage.getItem("@storage_Key");
@@ -16,34 +28,81 @@ const OddOneOutScreen = () =>{
 	useEffect(()=>{
 		getData();
 	});
+	const call=(val)=>{
+		if(val===true){
+			setTimeout(()=>{
+				setGameLevel(gameLevel+1);
+			},1000);
+		}
+	};
 	return(
 		<View>
-			<Text style={styles.text}>Choose the odd one out</Text>
-			<ImageBackground source={require("../../assets/background.png")}
-				style={{height:500,width:"100%"}}>
-				{oddoneout[id].map((lan,index)=>
-					<View style={{alignItems:"center"}}>
-						<View style={{flexDirection:"row"}}>
-							<TouchableOpacity></TouchableOpacity>
-							<Image source={lan[1]} style={styles.image}/>
-						</View>
-						<View>
-							<Image source={lan[2]} style={styles.image}/>
-						</View>
-						<View style={{flexDirection:"row"}}>
-							<Image source={lan[3]} style={styles.image}/>
-							<Image source={lan[4]} style={styles.image}/>
-						</View>
+			<LinearGradient
+				colors={["#42FCDB", "#3EE577"]}
+				style={{
+					width: Dimensions.get("window").width,
+					height:"100%",
+				}}
+			>
+				<View style={{
+					position:"absolute",
+					marginLeft: "2%",
+					marginTop: "12.5%",
+					flexDirection:"row"
+				}}>
+					<TouchableOpacity
+						onPress={() =>
+							props.navigation.navigate("Dashboard")}
+					>
+						<Image
+							source={require("../../assets/back.png")}
+							style={{
+								height: 20,
+								width: 20,
+								tintColor: "white"
+							}}
+						/>
+					</TouchableOpacity>
+				</View>
+				<Text style={styles.text}>{oddoneout[id][gameLevel][0]}</Text>
+				<View style={
+					{flexDirection:"row",justifyContent:"center"}
+				}>
+					<View>
+						{(oddoneout[id][gameLevel].map((val,index)=>
+							(index!==0&&index%2!=0)&&
+							<View
+								key={index}
+								style={{flexDirection:"row",padding:20}}>
+								<Buttons source={val}
+									required={require("../../assets/dog.png")}
+									fun={(val)=>{call(val);}}
+								/>
+							</View>
+						))}
 					</View>
-				)}
-			</ImageBackground>
+					<View>
+						{(oddoneout[id][gameLevel].map((val,index)=>
+							(index!==0&&index%2==0)&&
+							<View
+								key={index}
+								style={{flexDirection:"row",padding:20}}>
+								<Buttons source={val}
+									required={require("../../assets/dog.png")}
+									fun={(val)=>{call(val);}}
+								/>
+							</View>
+						))}
+					</View>
+				</View>
+			</LinearGradient>
 		</View>
 	);
 };
 const styles=StyleSheet.create({
 	text:{
 		textAlign:"center",
-		fontSize:30,
+		fontSize:28,
 		fontWeight:"bold",
 		marginTop:"10%",
 		marginBottom:"5%"
@@ -53,4 +112,7 @@ const styles=StyleSheet.create({
 		width:150
 	}
 });
+OddOneOutScreen.propTypes={
+	navigation:PropTypes.any,
+};
 export default OddOneOutScreen;

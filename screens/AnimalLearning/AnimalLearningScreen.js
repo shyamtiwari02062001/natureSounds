@@ -61,6 +61,7 @@ const AnimalLearningscreen=(props)=> {
 			console.log(e);
 		}
 	};
+	console.log(AnimalName);
 	return (
 		<View style={styles.container}>
 			<LinearGradient

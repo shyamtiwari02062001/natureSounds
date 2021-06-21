@@ -51,9 +51,6 @@ const DashboardScreen = (props) => {
 			props.navigation.navigate("JumbledWords");
 		}
 		if(index===4){
-			props.navigation.navigate("TurnAround");
-		}
-		if(index===5){
 			props.navigation.navigate("Listen");
 		}
 	};
@@ -112,53 +109,104 @@ const DashboardScreen = (props) => {
 					showsVerticalScrollIndicator={false}
 					showsHorizontalScrollIndicator={false}>
 					<View style={styles.view}>
-						<View style={{alignItems:"center"}}>
-							{DashboardData[id].map((lan,index)=>
-								(index%2==0)&&
-								<View
-									style={styles.buttonContainer}
-									key={index}>
-									<TouchableOpacity style={styles.button}
-										onPress={()=>{redirect(index);}}
-									>
-										<Image source={lan[1]}
-											style={{
-												height:100,
-												width:100,
-												alignItems:"center"
-											}}
-										/>
-										<Text
-											style={styles.text}>
-											{lan[0]}
-										</Text>
-									</TouchableOpacity>
-								</View>
-							)}
+						<View
+							style={styles.buttonContainer}
+						>
+							<TouchableOpacity style={styles.button}
+								onPress={()=>{redirect(0);}}
+							>
+								<Image source={DashboardData[id][0][1]}
+									style={{
+										height:100,
+										width:100,
+										alignItems:"center"
+									}}
+								/>
+								<Text
+									style={styles.text}>
+									{DashboardData[id][0][0]}
+								</Text>
+							</TouchableOpacity>
 						</View>
-						<View style={{alignItems:"center"}}>
-							{DashboardData[id].map((lan,index)=>
-								(index%2!==0)&&
-								<View
-									style={styles.buttonContainer}
-									key={index}>
-									<TouchableOpacity style={styles.button}
-										onPress={()=>{redirect(index);}}
-									>
-										<Image source={lan[1]}
-											style={{
-												height:100,
-												width:100,
-												alignItems:"center"
-											}}
-										/>
-										<Text
-											style={styles.text}>
-											{lan[0]}
-										</Text>
-									</TouchableOpacity>
-								</View>
-							)}
+						<View
+							style={styles.buttonContainer}
+						>
+							<TouchableOpacity style={styles.button}
+								onPress={()=>{redirect(1);}}
+							>
+								<Image source={DashboardData[id][1][1]}
+									style={{
+										height:100,
+										width:100,
+										alignItems:"center"
+									}}
+								/>
+								<Text
+									style={styles.text}>
+									{DashboardData[id][1][0]}
+								</Text>
+							</TouchableOpacity>
+						</View>
+					</View>
+					<View style={{alignItems:"center"}}>
+						<View
+							style={styles.buttonContainer}
+						>
+							<TouchableOpacity style={styles.button}
+								onPress={()=>{redirect(2);}}
+							>
+								<Image source={DashboardData[id][2][1]}
+									style={{
+										height:100,
+										width:100,
+										alignItems:"center"
+									}}
+								/>
+								<Text
+									style={styles.text}>
+									{DashboardData[id][2][0]}
+								</Text>
+							</TouchableOpacity>
+						</View>
+					</View>
+					<View style={styles.view}>
+						<View
+							style={styles.buttonContainer}
+						>
+							<TouchableOpacity style={styles.button}
+								onPress={()=>{redirect(3);}}
+							>
+								<Image source={DashboardData[id][3][1]}
+									style={{
+										height:100,
+										width:100,
+										alignItems:"center"
+									}}
+								/>
+								<Text
+									style={styles.text}>
+									{DashboardData[id][3][0]}
+								</Text>
+							</TouchableOpacity>
+						</View>
+						<View
+							style={styles.buttonContainer}
+						>
+							<TouchableOpacity style={styles.button}
+								onPress={()=>{redirect(4);}}
+							>
+								<Image source={DashboardData[id][4][1]}
+									style={{
+										height:100,
+										width:100,
+										alignItems:"center"
+									}}
+								/>
+								<Text
+									style={styles.text}>
+									{DashboardData[id][4][0]}
+								</Text>
+							</TouchableOpacity>
 						</View>
 					</View>
 				</ScrollView>
@@ -184,8 +232,8 @@ const styles = StyleSheet.create({
 	buttonContainer:{
 		flex:1,
 		flexDirection:"row",
-		justifyContent:"center",
-		alignItems:"center",padding:10,
+		justifyContent:"space-evenly",
+		alignContent:"center",padding:10,
 		width:"50%"
 	},
 	button:{
@@ -232,10 +280,8 @@ const styles = StyleSheet.create({
 		borderTopWidth:2
 	},
 	view:{
-		marginTop:"5%",
 		flexDirection:"row",
 		justifyContent:"space-around",
-		alignItems:"center"
 	}
 });
 DashboardScreen.propTypes={

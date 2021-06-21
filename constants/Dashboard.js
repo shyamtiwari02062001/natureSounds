@@ -2,9 +2,8 @@ const DashboardConstant={0:
 	[
 		["Birds",require("../assets/bird.png")],
 		["Animals",require("../assets/animal.png")],
-		["Odd one out",require("../assets/oddoneout.png")],
-		["Jumbled Words",require("../assets/jumbledWords.png")],
-		["Turn Around",require("../assets/turnAround.png")],
+		["Outlander",require("../assets/oddoneout.png")],
+		["Jumbled",require("../assets/jumbledWords.png")],
 		["Listen",require("../assets/listen.png")],
 
 	],
@@ -12,54 +11,86 @@ const DashboardConstant={0:
 	["पक्षियों",require("../assets/bird.png")],
 	["जानवर",require("../assets/animal.png")],
 	["बेमेल",require("../assets/oddoneout.png")],
+	["अव्यवस्थित",require("../assets/jumbledWords.png")],
+	["सुनें",require("../assets/listen.png")],
+
 ],
 2:[
 	["পাখি",require("../assets/bird.png")],
 	["প্রাণী",require("../assets/animal.png")],
+	["আউটল্যান্ডার",require("../assets/oddoneout.png")],
+	["বিড়বিড়",require("../assets/jumbledWords.png")],
+	["শোনো",require("../assets/listen.png")],
 ],
 3:[
 	["પક્ષીઓ",require("../assets/bird.png")],
 	["પ્રાણી",require("../assets/animal.png")],
+	["આઉટલેન્ડર",require("../assets/oddoneout.png")],
+	["ખળભળાટ મચી ગયો",require("../assets/jumbledWords.png")],
+	["સાંભળો",require("../assets/listen.png")],
 ],
 4:[
 	["ಪಕ್ಷಿಗಳು",require("../assets/bird.png")],
 	["ಪ್ರಾಣಿ",require("../assets/animal.png")],
+	["ಪಿಡಿಡಿ ಒಂದು .ಟ್",require("../assets/oddoneout.png")],
+	["ಅದಲುಬದಲು",require("../assets/jumbledWords.png")],
+	["ಕೇಳು",require("../assets/listen.png")],
 ],
 5:[
 	["പക്ഷികൾ",require("../assets/bird.png")],
 	["മൃഗം",require("../assets/animal.png")],
+	["വിചിത്രമായ ഒന്ന്",require("../assets/oddoneout.png")],
+	["ഇടറി",require("../assets/jumbledWords.png")],
+	["ശ്രദ്ധിക്കൂ",require("../assets/listen.png")],
 ],
 6:[
 	["पक्षी",require("../assets/bird.png")],
 	["प्राणी",require("../assets/animal.png")],
+	["न जूळणारा बाहेर",require("../assets/oddoneout.png")],
+	["गोंधळ उडाला",require("../assets/jumbledWords.png")],
+	["ऐका",require("../assets/listen.png")],
 ],
 7:[
-	["चराहरू",require("../assets/bird.png")],
-	["जनावर",require("../assets/animal.png")],
-],
-8:[
 	["ପକ୍ଷୀଗଣ",require("../assets/bird.png")],
 	["ପଶୁ",require("../assets/animal.png")],
+	["ଅଦ୍ଭୁତ ଗୋଟିଏ",require("../assets/oddoneout.png")],
+	["ଜମ୍ବୁଲା |",require("../assets/jumbledWords.png")],
+	["ଶୁଣ",require("../assets/listen.png")],
 ],
-9:[
+8:[
 	["ਪੰਛੀ",require("../assets/bird.png")],
 	["ਜਾਨਵਰ",require("../assets/animal.png")],
+	["ਅਜੀਬ ਬਾਹਰ",require("../assets/oddoneout.png")],
+	["ਜੰਬਲ",require("../assets/jumbledWords.png")],
+	["ਸੁਣੋ",require("../assets/listen.png")],
 ],
-10:[
+9:[
 	["پکي",require("../assets/bird.png")],
 	["حيوان",require("../assets/animal.png")],
+	["بي جوڙ",require("../assets/oddoneout.png")],
+	["ٺڳيل",require("../assets/jumbledWords.png")],
+	["ٻڌو",require("../assets/listen.png")],
 ],
-11:[
+10:[
 	["பறவைகள்",require("../assets/bird.png")],
 	["விலங்கு",require("../assets/animal.png")],
+	["ஒற்றைப்படை ஒன்று",require("../assets/oddoneout.png")],
+	["தடுமாறியது",require("../assets/jumbledWords.png")],
+	["கேளுங்கள்",require("../assets/listen.png")],
 ],
-12:[
+11:[
 	["పక్షులు",require("../assets/bird.png")],
 	["జంతువు",require("../assets/animal.png")],
+	["బేసి ఒకటి",require("../assets/oddoneout.png")],
+	["గందరగోళంగా",require("../assets/jumbledWords.png")],
+	["వినండి",require("../assets/listen.png")],
 ],
-13:[
+12:[
 	["پرندے",require("../assets/bird.png")],
 	["جانور",require("../assets/animal.png")],
+	["عجیب سے باہر",require("../assets/oddoneout.png")],
+	["گڑگڑا ہوا",require("../assets/jumbledWords.png")],
+	["سنو",require("../assets/listen.png")],
 ],
 };
 export default DashboardConstant;

@@ -6,12 +6,11 @@ const Languages=[
 	"ಕನ್ನಡ (Kannada)",
 	"മലയാളം (Malayalam)",
 	"मराठी (Marathi)",
-	"नेपाली (Nepali)",
 	"ଘୃଣା (Odia)",
 	"ਪੰਜਾਬੀ (Punjabi)",
 	"سنڌي (Sindhi)",
 	"தமிழ் (Tamil)",
 	"తెలుగు (Telugu)",
-	"اردو (Urdu)"
+	"اردو (Urdu)",
 ];
 export default Languages;
