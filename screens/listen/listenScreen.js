@@ -6,19 +6,23 @@ import {View,
 	Text,
 	TouchableOpacity,
 	AsyncStorage,
-	Modal
+	Pressable
 } from "react-native";
 import PropTypes from "prop-types";
 import { Audio } from "expo-av";
 import { LinearGradient } from "expo-linear-gradient";
 import Listen from "../../constants/ListenAndTap";
+import PopUp from "../../components/PopUp";
+import GamePointContext from "../../context/GamePoints";
 const ListenScreen=(props)=>{
+	const {gamePoint,setGamePoint}=React.useContext(GamePointContext);
 	const [sound, setSound] = React.useState();
 	// eslint-disable-next-line prefer-const
-	let [gameLevel,setGamelevel]=useState(0);
+	let [gameLevel,setGameLevel]=useState(0);
 	const [success,setSuccess]=useState(false);
 	const [id,setId]=useState(0);
 	const [modalVisible, setModalVisible] = useState(false);
+	// eslint-disable-next-line no-unused-vars
 	const [selected,setSelected]=useState("");
 	// eslint-disable-next-line func-style
 	async function PlaySound() {
@@ -41,6 +45,16 @@ const ListenScreen=(props)=>{
 			console.log(e);
 		}
 	};
+	const storesData = async (input) => {
+		try {
+			await AsyncStorage.setItem(
+				"@MySuperStore:key",
+				input
+			);
+		} catch (error) {
+			console.log(error);
+		}
+	};
 	useEffect(() => {
 		getData();
 		return sound
@@ -59,6 +73,21 @@ const ListenScreen=(props)=>{
 			setSuccess(false);
 			setModalVisible(true);
 		}
+	};
+	const retry=()=>{
+		setModalVisible(false);
+	};
+	const nextLevel=()=>{
+		storesData(`${gamePoint+10}`);
+		setGamePoint(gamePoint+10);
+		setModalVisible(false);
+		setGameLevel(++gameLevel);
+	};
+	const moveBack=()=>{
+		storesData(`${gamePoint+10}`);
+		setGamePoint(gamePoint+10);
+		setModalVisible(false);
+		props.navigation.navigate("Dashboard");
 	};
 	return(
 		<View>
@@ -111,7 +140,7 @@ const ListenScreen=(props)=>{
 								fontSize: 20,
 								paddingLeft: 10
 							}}>
-              3457
+								{gamePoint}
 							</Text>
 						</View>
 					</View>
@@ -121,6 +150,11 @@ const ListenScreen=(props)=>{
 					<View style={{flex:1,justifyContent:"space-around"}}>
 						<View style={styles.view}>
 							<TouchableOpacity
+								style={{
+									backgroundColor:"teal",
+									padding:5,
+									borderRadius:20
+								}}
 								onPress={()=>{
 									check(1);
 									setSelected(Listen[id][gameLevel][14]);
@@ -131,6 +165,11 @@ const ListenScreen=(props)=>{
 								/>
 							</TouchableOpacity>
 							<TouchableOpacity
+								style={{
+									backgroundColor:"teal",
+									padding:5,
+									borderRadius:20
+								}}
 								onPress={()=>{
 									check(2);
 									setSelected(Listen[id][gameLevel][15]);
@@ -143,6 +182,11 @@ const ListenScreen=(props)=>{
 						</View>
 						<View style={{alignItems:"center"}}>
 							<TouchableOpacity
+								style={{
+									backgroundColor:"teal",
+									padding:5,
+									borderRadius:20
+								}}
 								onPress={()=>{
 									check(3);
 									setSelected(Listen[id][gameLevel][16]);
@@ -155,6 +199,11 @@ const ListenScreen=(props)=>{
 						</View>
 						<View style={styles.view}>
 							<TouchableOpacity
+								style={{
+									backgroundColor:"teal",
+									padding:5,
+									borderRadius:20
+								}}
 								onPress={()=>{
 									check(4);
 									setSelected(Listen[id][gameLevel][17]);
@@ -165,6 +214,11 @@ const ListenScreen=(props)=>{
 								/>
 							</TouchableOpacity>
 							<TouchableOpacity
+								style={{
+									backgroundColor:"teal",
+									padding:5,
+									borderRadius:20
+								}}
 								onPress={()=>{
 									check(5);
 									setSelected(Listen[id][gameLevel][18]);
@@ -200,87 +254,81 @@ const ListenScreen=(props)=>{
 					</View>
 				</LinearGradient>
 			</View>
-			<Modal
-				animationType="slide"
-				transparent={true}
-				visible={modalVisible}
-				onRequestClose={() => {
-					setModalVisible(!modalVisible);
-				}}
-			>
-				<View style={styles.centeredView}>
-					{(success==true)&&<View style={styles.modalView}>
+			<PopUp visible={modalVisible} onClose={(val)=>{setSuccess(val);}}>
+				<View style={{justifyContent:"space-evenly"}}>
+					{(success===true)?
+						<Text style={{
+							textAlign:"center",
+							fontSize:24,
+							fontWeight:"bold",
+							color:"green"
+						}}>Yay! you did it</Text>:
+						<Text style={{
+							textAlign:"center",
+							fontSize:24,
+							fontWeight:"bold",
+							color:"red"
+						}}>Oops try again</Text>}
 
-						<Text
-							style={styles.modalText}>{Listen[id][gameLevel][9]}
-						</Text>
-						<Text
-							style={{
-								fontSize:20,
-								marginBottom:"5%",
-								fontWeight:"bold"
-							}}>
-							{selected}</Text>
-						<View style={{flexDirection:"row"}}>
-							<TouchableOpacity
-								style={[styles.button, styles.buttonClose]}
-								onPress={() => {
-									setModalVisible(!modalVisible);
-									setGamelevel(--gameLevel);}
-								}
-							>
-								<Text
-									style={styles.textStyle}>
-									{Listen[id][gameLevel][13]}</Text>
-							</TouchableOpacity>
-							<TouchableOpacity
-								style={[styles.button, styles.buttonClose]}
-								onPress={() => {
-									setModalVisible(!modalVisible);
-									setGamelevel(++gameLevel);}}
-							>
-								<Text
-									style={styles.textStyle}>
-									{Listen[id][gameLevel][11]}</Text>
-							</TouchableOpacity>
+					{(success===true)&&
+					<View>
+						<View style={{alignItems:"center"}}>
+							<Image
+								source={require("../../assets/coin.gif")}
+								style={{height:100,width:100}}
+							/>
 						</View>
-					</View>
-					}
-					{(success==false)&&<View style={styles.modalView}>
-						<Text
-							style={styles.modalText}>{Listen[id][gameLevel][10]}
-						</Text>
-						<Text
-							style={{
-								fontSize:20,
-								marginBottom:"5%",
-								fontWeight:"bold"
-							}}>
-							{selected}</Text>
-						<View style={{flexDirection:"row"}}>
-							<TouchableOpacity
-								style={[styles.button, styles.buttonClose]}
-								onPress={() => {
-									setModalVisible(!modalVisible);
-									setGamelevel(--gameLevel);}}
-							>
-								<Text
-									style={styles.textStyle}>
-									{Listen[id][gameLevel][13]}</Text>
-							</TouchableOpacity>
-							<TouchableOpacity
-								style={[styles.button, styles.buttonClose]}
-								onPress={() => setModalVisible(!modalVisible)}
-							>
-								<Text
-									style={styles.textStyle}>
-									{Listen[id][gameLevel][12]}</Text>
-							</TouchableOpacity>
+						<View style={{
+							flexDirection:"row",
+							alignItems:"center",
+							justifyContent:"center",
+							marginTop:20}}>
+							<Text style={{
+								fontSize:16,textAlign:"center"
+							}}>{"10 "}</Text>
+							<Image
+								source={require("../../assets/dollar.png")}
+								style={{height:30,width:30}}
+							/>
+							<Text style={{
+								fontSize:16,textAlign:"center"
+							}}>{" earned"}</Text>
 						</View>
+					</View>}
+					<View style={{
+						flexDirection:"row",
+						justifyContent:"space-around",
+						marginTop:20,marginBottom:5
+					}}>
+						<Pressable
+							onPress={()=>{
+								moveBack();
+							}} style={{marginRight:25}}>
+							<Image
+								source={require("../../assets/home.png")}
+								style={{height:30,width:30}}
+							/>
+						</Pressable>
+						<Pressable
+							onPress={()=>{retry();}}
+							style={{marginLeft:25,marginRight:25}}>
+							<Image
+								source={require("../../assets/retry.png")}
+								style={{height:30,width:30}}
+							/>
+						</Pressable>
+						{(success===true)&&
+						<Pressable
+							onPress={()=>{nextLevel();}}
+							style={{marginLeft:25}}>
+							<Image
+								source={require("../../assets/next.png")}
+								style={{height:30,width:30}}/>
+						</Pressable>
+						}
 					</View>
-					}
 				</View>
-			</Modal>
+			</PopUp>
 		</View>
 	);
 };

@@ -1,10 +1,18 @@
 const BirdList={0:[
 	["Crow",require("../assets/crow.png")],
 	["Cuckoo",require("../assets/Cuckoo.png")],
+	["Eagle",require("../assets/eagle.png")],
+	["Bat",require("../assets/bat.png")],
+	["Duck",require("../assets/duck.png")],
+	["Owl",require("../assets/owl.png")],
 ],
 1:[
 	["कौआ",require("../assets/crow.png")],
 	["कोयल",require("../assets/Cuckoo.png")],
+	["ईगल",require("../assets/eagle.png")],
+	["चमगादड़",require("../assets/bat.png")],
+	["Duck",require("../assets/duck.png")],
+	["Owl",require("../assets/owl.png")],
 ],
 2:[
 	["কাক",require("../assets/crow.png")],

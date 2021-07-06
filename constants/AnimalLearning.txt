@@ -1,0 +1,519 @@
+/* eslint-disable indent */
+/* eslint-disable no-irregular-whitespace */
+/* eslint-disable quotes */
+/* eslint-disable max-len */
+const LearningMaterial={0:{"Dog":["Play Audio",
+	"IT IS A DOG",
+	"Lifespan",
+	"10 – 13 years",
+	"Gestation period",
+	"58 – 68 days ",
+	"Height",
+	"15 – 110 cm",
+	"Daily sleep",
+	"12 – 14 hours",
+	"Experties",
+	"Sense of smell",
+	"About",
+	`-> Dog, (Canis lupus familiaris), domestic mammal of the family Canidae (order Carnivora). 
+
+-> It is a subspecies of the gray wolf (Canis lupus) and is related to foxes and jackals. 
+
+-> The dog is one of the two most ubiquitous and most popular domestic animals in the world (the cat is the other). 
+
+-> For more than 12,000 years it has lived with humans as a hunting companion, protector, object of scorn or adoration, and friend.`,
+	"Size",
+	`->Dogs are highly variable in height and weight. 
+
+->The smallest known adult dog was a Yorkshire Terrier that stood only 6.3 centimetres (2 1⁄2 inches) at the shoulder, 9.5 cm (3 3⁄4 in) in length along the head-and-body and weighed only 113 grams (4 ounces). 
+
+->The most massive known dog was a Saint Bernard, which weighed 167.6 kg (369 1⁄2 lb) and was 250 cm (8 ft 2 in) from the snout to the tail.[25] 
+
+->The tallest dog is a Great Dane that stands 106.7 cm (3 ft 6 in) at the shoulder.`,
+	"Habitate",
+	`->The lives of dogs in the wild give powerful clues for the ingredients of a healthy, happy, balanced life for your pet. 
+
+->Dogs live in many habitats, including prairies, deserts, grasslands, forests, rain forests, coastal regions and arctic zones. 
+
+->Dogs are highly adaptable, yet some evolved for specific environments, such as breeds that developed heavy coats to withstand freezing climates. 
+
+->Aside from these differences, dogs' needs for food, shelter, exercise and social interaction are universal. 
+
+->The reasons why your dog likes to lean against you, chase things and curl up in a dog bed stem from her nature as a pack animal.`,
+	"Behavior",
+	`->Dog behavior is the internally coordinated responses (actions or inactions) of the domestic dog (individuals or groups) to internal and external stimuli. 
+
+->As the oldest domesticated species, with estimates ranging from 9,000 to 30,000 years BCE, dogs' minds inevitably have been shaped by millennia of contact with humans. 
+
+->As a result of this physical and social evolution, dogs have acquired the ability to understand and communicate with humans more than any other species, and they are uniquely attuned to human behaviors. 
+
+->Behavioral scientists have uncovered a surprising set of social-cognitive abilities in the domestic dog. 
+
+->These abilities are not possessed by the dog's closest canine relatives or other highly intelligent mammals, such as great apes, but rather parallel to children's social-cognitive skills.
+
+->Unlike other domestic species selected for production-related traits, dogs were initially selected for their behaviors. 
+
+->In 2016, a study found that only 11 fixed genes showed variation between wolves and dogs. 
+
+->These gene variations were unlikely to have been the result of natural evolution and indicate selection on both morphology and behavior during dog domestication. 
+
+->These genes have been shown to affect the catecholamine synthesis pathway, with the majority of the genes affecting the fight-or-flight response (i.e., selection for tameness) and emotional processing. 
+
+->Dogs generally show reduced fear and aggression compared with wolves. Some of these genes have been associated with aggression in some dog breeds, indicating their importance in both the initial domestication and later in breed formation. 
+
+->Traits of high sociability and lack of fear in dogs may include genetic modifications related to Williams-Beuren syndrome in humans, which cause hypersociability at the expense of problem-solving ability.`,
+"Intelligence",
+`->Dog intelligence is the dog's ability to perceive information and retain it as knowledge for applying to solve problems. 
+
+->Studies of two dogs suggest that dogs can learn by inference and have advanced memory skills. 
+
+->A study with Rico, a Border Collie, showed that he knew the labels of over 200 different items. He inferred the names of novel things by exclusion learning and correctly retrieved those new items immediately and four weeks after the initial exposure. 
+
+->A study of another Border Collie, "Chaser," documented his learning and memory capabilities. He had learned the names and could associate by verbal command over 1,000 words. Dogs can read and react appropriately to human body language such as gesturing and pointing and human voice commands.
+
+->A 2018 study on canine cognitive abilities found that dogs' capabilities are no more exceptional than those of other animals, such as horses, chimpanzees, or cats. Various animals, including pigs, pigeons and chimpanzees, can remember the "what, where, and when" of an event, which dogs cannot do.
+
+->Dogs demonstrate a theory of mind by engaging in deception. An experimental study showed compelling evidence that Australian dingos can outperform domestic dogs in non-social problem-solving, indicating that domestic dogs may have lost much of their original problem-solving abilities once they joined up with humans. Another study revealed that after undergoing training to solve a simple manipulation task, dogs faced with an insoluble version of the same problem look at the human, while socialized wolves do not.`,
+"Diet",
+`->Dogs have been described as carnivores or omnivores. Compared to wolves, dogs from agricultural societies have extra copies of amylase and other genes involved in starch digestion that contribute to an increased ability to thrive on a starch-rich diet. 
+
+->Also, like humans, some dog breeds produce amylase in their saliva. Based on metabolism and nutrition, many consider the dog to be an omnivore.
+
+->However, dogs are not merely omnivores. More like cats and less like other omnivores, dogs can only produce bile acid with taurine, and they cannot produce vitamin D, which they obtain from animal flesh. Also, more like cats, dogs require arginine to maintain its nitrogen balance. These nutritional requirements place dogs halfway between carnivores and omnivores.`,
+"Breeds",
+`->Over the past 200 years, dogs have undergone rapid phenotypic change and were formed into today's modern dog breeds due to artificial selection by humans. These breeds can vary in size and weight from a 0.46 kg (1 lb) teacup Poodle to a 90 kg (200 lb) giant Mastiff. 
+
+->Phenotypic variation can include height measured to the withers ranging from 15.2 cm (6 in) in the Chihuahua to 76 cm (30 in) in the Irish Wolfhound. 
+
+->Color varies from white through grays (usually called "blue") to black, and browns from light (tan) to dark ("red" or "chocolate") in a wide variety of patterns; coats can be short or long, coarse-haired to wool-like, straight, curly, or smooth. 
+
+->The skull, body, and limb proportions vary significantly between breeds, with dogs displaying more phenotypic diversity than can be found within carnivores' entire order. 
+
+->Some breeds demonstrate outstanding skills in herding, retrieving, scent detection, and guarding, demonstrating the functional and behavioral diversity of dogs. The first dogs were domesticated from shared ancestors of modern wolves; however, the phenotypic changes that coincided with the dog-wolf genetic divergence are unknown`,
+"Interesting Facts",`1. Their sense of smell is at least 40x better than ours
+
+2. Some have such good noses they can sniff out medical problems
+
+3. Dogs can sniff at the same time as breathing
+
+4. Some dogs are incredible swimmers
+
+5. Some are fast and could even beat a cheetah!
+`,"Dog Details",
+require("../assets/dog.png"),
+require("../assets/dog.gif"),
+require("../assets/dog.mp3")
+],
+"Cat":["Play Audio",
+"IT IS A CAT",
+"Lifespan",
+"2 – 16 years ",
+"Gestation period",
+"58 – 67 days",
+"Daily Sleep",
+"12 – 16 hours",
+"Weight",
+"3.6 – 4.5 kg",
+"Speed",
+"48 km/h (Maximum)",
+"About",
+`Cat, (Felis catus), also called house cat or domestic cat, domesticated member of the family Felidae, order Carnivora, and the smallest member of that family.
+
+Like all felids, domestic cats are characterized by supple low-slung bodies, finely molded heads, long tails that aid in balance, and specialized teeth and claws that adapt them admirably to a life of active hunting. 
+
+Cats possess other features of their wild relatives in being basically carnivorous, remarkably agile and powerful, and finely coordinated in movement`,
+"Size",
+`->The cat skull is unusual among mammals in having very large eye sockets and a powerful specialized jaw. 
+
+->Within the jaw, cats have teeth adapted for killing prey and tearing meat. When it overpowers its prey, a cat delivers a lethal neck bite with its two long canine teeth, inserting them between two of the prey's vertebrae and severing its spinal cord, causing irreversible paralysis and death.
+
+->Compared to other felines, domestic cats have narrowly spaced canine teeth relative to the size of their jaw, which is an adaptation to their preferred prey of small rodents, which have small vertebrae. 
+
+->The premolar and first molar together compose the carnassial pair on each side of the mouth, which efficiently shears meat into small pieces, like a pair of scissors. These are vital in feeding, since cats' small molars cannot chew food effectively, and cats are largely incapable of mastication. 
+
+->Although cats tend to have better teeth than most humans, with decay generally less likely because of a thicker protective layer of enamel, a less damaging saliva, less retention of food particles between teeth, and a diet mostly devoid of sugar, they are nonetheless subject to occasional tooth loss and infection.`
+,"Habitate",
+`->The domestic cat is a cosmopolitan species and occurs across much of the world. 
+
+->It is adaptable and now present on all continents except Antarctica, and on 118 of the 131 main groups of islands—even on isolated islands such as the Kerguelen Islands. 
+
+->Due to its ability to thrive in almost any terrestrial habitat, it is among the world's most invasive species. As it is little altered from the wildcat, it can readily interbreed with the wildcat. 
+
+->This hybridization poses a danger to the genetic distinctiveness of some wildcat populations, particularly in Scotland and Hungary and possibly also the Iberian Peninsula. 
+
+->It lives on small islands with no human inhabitants. Feral cats can live in forests, grasslands, tundra, coastal areas, agricultural land, scrublands, urban areas, and wetlands`,
+"Diet",
+`->Cats should have a diet similar to that of their wild relatives. They are adapted by nature to be flesh eaters, as is shown by their alimentary tract and their dentition. 
+
+->The cat uses its canines to catch and kill prey, the molars to cut it up. Lack of flat-surfaced teeth prevents it from chewing or gnawing. 
+
+->The cat has a short intestine, and its stomach secretes digestive juices that act primarily on meat. Cats, however, like all meat-eating animals, ingest grass and other plants occasionally, and small quantities of vegetables may serve as both a laxative and a hair ball remover.`,
+"Behaviour",
+`->The cat has a subtle repertoire of facial expressions, vocal sounds, and tail and body postures that express its emotional state and intentions. 
+
+->These various signals serve to increase, decrease, or maintain social distance. 
+
+->One distinctive social behaviour involves rubbing the side of the head, lips, chin, or tail against the owner and against furniture. These regions of the cat’s body contain scent glands that seem to play a role in establishing a familiar odour in the cat’s environment.`,
+"Classification/Taxonomy",
+`->The scientific name Felis catus was proposed by Carl Linnaeus in 1758 for a domestic cat. 
+
+->Felis catus domesticus was proposed by Johann Christian Polycarp Erxleben in 1777. 
+
+->Felis daemon proposed by Konstantin Alekseevich Satunin in 1904 was a black cat from the Transcaucasus, later identified as a domestic cat.
+
+->In 2003, the International Commission on Zoological Nomenclature ruled that the domestic cat is a distinct species, namely Felis catus. In 2007, it was considered a subspecies, F. silvestris catus, of the European wildcat (F. silvestris) following results of phylogenetic research.
+
+->In 2017, the IUCN Cat Classification Taskforce followed the recommendation of the ICZN in regarding the domestic cat as a distinct species, Felis catus.`,
+"Breeds",
+`->The number of recognized show breeds that have defined, inherited characteristics has increased dramatically since the late 1950s as cats have become more popular as home companions. 
+
+->The 30 to 40 distinctive breeds can be grouped into two general categories: the long-haired Persian and the domestic shorthair. Both of these breeds occur in various subcategories based on their coat colour, such as white, cream, chinchilla (or silver), smoke, tortoiseshell, and tabby (red, blue, and so on). 
+
+->Other distinctive and popular breeds include the Siamese (with seal point, blue point, chocolate point, and lilac point colour variations), the long-haired Himalayan, which resembles the Siamese in coloration, and the Abyssinian, Burmese, Manx, Rex, and Russian Blue.`,
+
+"Interesting Facts",
+`1. The oldest known pet cat existed 9,500 years ago
+
+2. Cats spend 70% of their lives sleeping
+
+3. A cat was the Mayor of an Alaskan town for 20 years
+
+4. The record for the longest cat ever is 48.5 inches
+
+5. The richest cat in the world had £7 million`,
+"Cat Details",
+require("../assets/cat.png"),
+require("../assets/cat.gif"),
+require("../assets/cat.mp3")
+],
+"Lion":["Play Audio",
+"IT IS A Lion",
+"Lifespan",
+"Female 10-15 & Male 8-10 year",
+"Speed",
+"80km/h",
+"Weight",
+"Male 190 kg Female 130 kg",
+"Family",
+"Falidae",
+"kingdom",
+"Animalia",
+"About",
+`->Lion, (Panthera leo), large, powerfully built cat (family Felidae) that is second in size only to the tiger. The proverbial “king of beasts,” the lion has been one of the best-known wild animals since earliest times. 
+
+->Lions are most active at night and live in a variety of habitats but prefer grassland, savanna, dense scrub, and open woodland. Historically, they ranged across much of Europe, Asia, and Africa, but now they are found mainly in parts of Africa south of the Sahara. 
+
+->An isolated population of about 650 Asiatic lions constitute a slightly smaller race that lives under strict protection in India’s Gir National Park and Wildlife Sanctuary.`,
+"General Characterstics",
+`->The lion is a well-muscled cat with a long body, large head, and short legs. Size and appearance vary considerably between the sexes. 
+
+->The male’s outstanding characteristic is his mane, which varies between different individuals and populations. It may be entirely lacking; it may fringe the face; or it may be full and shaggy, covering the back of the head, neck, and shoulders and continuing onto the throat and chest to join a fringe along the belly. 
+
+->In some lions the mane and fringe are very dark, almost black, giving the cat a majestic appearance. Manes make males look larger and may serve to intimidate rivals or impress prospective mates. 
+
+->A full-grown male is about 1.8–2.1 metres (6–7 feet) long, excluding the 1-metre tail; he stands about 1.2 metres high at the shoulder and weighs 170–230 kg (370–500 pounds). The female, or lioness, is smaller, with a body length of 1.5 metres, a shoulder height of 0.9–1.1 metres, and a weight of 120–180 kg. 
+
+->The lion’s coat is short and varies in colour from buff yellow, orange-brown, or silvery gray to dark brown, with a tuft on the tail tip that is usually darker than the rest of the coat.`,
+"Habitate and distribution",
+`->The lion may be called the "king of the jungle," but it's actually absent from rainforests. Instead, this cat prefers the grassy plains, savannas, and scrubland of sub-Saharan Africa. 
+
+->The Asiatic lion lives in Gir Forest National Park in India, but its habitat only includes the savanna and scrub forest areas.`,
+"Diet",
+`->Lions are hypercarnivores, which means their diet consists of more that 70% meat. African lions prefer to hunt large ungulates, including zebra, African buffalo, gemsbok, giraffe, and wildebeest. 
+
+->They avoid very large (elephant, rhinoceros, hippopotamus) and very small (hare, monkey, hyrax, dik-dik) prey, but will take domestic livestock. A single lion can take down prey twice its size. In prides, lionesses hunt cooperatively, stalking from more than one direction to capture fleeing animals. 
+
+->Lions kill either by strangling their prey or by enclosing its mouth and nostrils to suffocate it. Usually, prey is consumed at the hunting site. Lions often lose their kills to hyenas and sometimes to crocodiles.
+
+->While the lion is an apex predator, it falls prey to humans. Cubs are often killed by hyenas, wild dogs, and leopards. `,
+" Behavior",
+`->Lions sleep for 16 to 20 hours a day. They most often hunt at dawn or dusk, but can adapt to their prey to change their schedule.
+
+->They communicate using vocalizations, head rubbing, licking, facial expressions, chemical marking, and visual marking.
+
+->Lions are known for their fierce roar, but may also growl, meow, snarl, and purr. `,
+"Reproduction and Offspring",
+`->Lions are sexually mature at about three years of age, although males tend to be four or five years old before winning a challenge and joining a pride. When a new male takes over a pride, he usually kills the youngest generation of cubs and evicts the adolescents. 
+
+->Lionesses are polyestrous, which means they can mate at any time of year. They go into heat either when their cubs are weaned or when they are all killed.
+
+->As with other cats, the male lion's penis has backward-pointing spines that stimulate the lioness to ovulate during mating. After a gestation period of about 110 days, the female gives birth to one to four cubs. 
+
+->In some prides, the female gives birth to her cubs in a secluded den and hunts alone until the cubs are six to eight weeks of age. In other prides, one lioness cares for all the cubs while the others go hunting. Females fiercely defend cubs within their pride. Males tolerate their cubs, but don't always defend them.
+
+->About 80% of cubs die, but those that survive to adulthood may live to be 10 to 14 years of age. Most adult lions are killed by humans or other lions, although some succumb to injuries sustained while hunting. `,
+"Conservation Status",
+`->African lions are considered vulnerable of extinction by the IUCN Red List. They are threatened by loss and fragmentation of habitat. They are also killed by humans in bravery rituals, as hunting trophies, for medicinal powers, or by ranchers protecting their livestock. 
+
+->Furthermore, they are susceptible to tick-borne diseases like canine distemper and babesia. Distemper is spread to lions by neighboring village dogs as well as hyenas. Babesia occurs during droughts, when malnourished prey is vulnerable to disease. The ticks spread to the lions after they kill the sick animal. 
+
+->The combination of distemper and babesia causes mass fatalities in lion populations.`,
+"Interesting Facts",
+`1. Lions Don't Need to Drink Everyday, But They Do Need to Eat.
+
+2. Female Lions (Lionesses) Do Most of the Hunting.
+
+3. Lions Are Superb Hunters.
+
+4.Female Lions Raise Cubs Together
+
+5. Lions Are the Second Largest Cat on Earth`,
+"Lion Details",
+require("../assets/lion.png"),
+require("../assets/lion.png"),
+require("../assets/Lion.mp3")
+],
+"Rabbit":[
+"Play Audio",
+"IT IS A Rabbit",
+"Lifespan",
+"9 years",
+"Speed",
+"40 km/h",
+"Main Prey",
+"Clover, Grass, vegetables",
+"Predators",
+"Foxes, wolves, bobcats, eagles, owls, coyotes",
+"Diet",
+"Herbivore",
+"About",
+`->Rabbits are small mammals with fluffy, short tails, whiskers and distinctive long ears. There are more than 30 species around the world, and while they live in many different environments, they have many things in common.
+
+->Rabbits and hares are in the same taxonomic family, Leporidae, but they are in different genera. There are 11 genera within the family, but the term “true hares” refers only to species in the genus Lepus; all others are rabbits. Also, the American Rabbit Breeders Association (ARBA) recognizes 49 rabbit breeds.`,
+"Size",
+`->Some rabbits are about the size of a cat, and some can grow to be as big as a small child. Small rabbits, such as pygmy rabbits, can be as little as 8 inches (20 centimeters) in length and weigh less than a pound. 
+
+->Larger species grow to 20 inches (50 cm) and more than 10 lbs. (4.5 kilograms). 
+
+->According to Dr. Lianne McLeod, a veterinarian, in a column for The Spruce website, the largest rabbit breeds are the checkered giant, over 11 lbs. (5 kg); Flemish giant, 13 lbs. (5.9 kg) and over; giant papillon, 13 to 14 lbs. 5.9 to 6.3 kg); and giant chinchilla, 12 to 16 lbs. (5.4 to 7.2 kg). 
+
+->The world's longest rabbit, according to Guinness World Records, is a Flemish giant that clocked in at 4 feet 3 inches (129 cm) and 49 pounds (22 kg).
+
+->Small rabbit breeds include the Britannia Petite, under 2.5 lbs. (1.1 kg); Netherland dwarf, under 2.5 lbs.; dwarf hotot, under 3 lbs. (1.3 kg); and Himalayan, 2.5 to 4.5 lbs. (1.1 to 2 kg).`,
+"Habitat",
+`->While originally from Europe and Africa, rabbits are now found all over the world. They occupy most of the world’s land masses, except for southern South America, the West Indies, Madagascar, and most islands southeast of Asia, according to ADW. 
+
+->Although originally absent from South America, Australia, New Zealand, Java, rabbits have been introduced to these locations during the last few centuries.
+
+->Domestic rabbits need a regulated environment to protect against heat exhaustion or hypothermia. Wild rabbits don't have this problem and make their homes in various temperature extremes. Wild rabbits can be found in woods, forests, meadows, grasslands, deserts, tundra and wetlands. 
+
+->Wild rabbits create their own homes by tunneling into the ground. These tunnel systems are called warrens and include rooms for nesting and sleeping. They also have multiple entrances for quick escape. Warrens can be as deep as 9.84 feet (3 meters) underground, according to the Young People's Trust for the Environment.`,
+"Habits",
+`->Rabbits are very social creatures and live in large groups called colonies. The busiest time of day for rabbits is at dusk and dawn. This is when they venture out to find food. The low light allows them to hide from predators.
+
+->Predators — which include owls, hawks, eagles, falcons, wild dogs, feral cats and ground squirrels — are a constant threat. The rabbit’s long legs and ability to run for long periods at high speeds are likely evolutionary adaptations to help them elude things that want to eat them.`,
+"Diet",
+`->Rabbits are herbivores. This means that they have a plant-based diet and do not eat meat. Their diets include grasses, clover and some cruciferous plants, such as broccoli and Brussels sprouts. They are opportunistic feeders and also eat fruits, seeds, roots, buds, and tree bark, according to ADW.`,
+"Offspring",
+`->Rabbits are known for their insatiable reproductive habits for good reason. They breed three to four times each year. This is because only 15 percent of baby rabbits make it to their first birthday, according to the Animal Diversity Web (ADW). So, to ensure that the population grows, rabbits have more babies. 
+
+->Each pregnancy produces three to eight babies, called kittens or kits. ("Bunny" is just an affectionate name for a rabbit, young or adult, according to Small Pet Select.) After four to five weeks, a kit can care for itself. In two or three months it is ready to start a family of its own. If there is a lack of natural predators, an area can quickly become overrun with rabbits.`,
+"Conservation/Status",
+`->The domestic or European rabbit is considered within near threatened range by the IUCN. Found all over the world, scientists think most populations are descendants of domestic rabbits that were released in the wild. 
+
+->It is native to the Iberian Peninsula, and in that area, populations have declined as much as 95 percent from its 1950 numbers, and about 80 percent of its 1975 numbers. The decline is attributed to habitat loss, disease and hunting. Rabbits are considered pests by many gardeners.
+
+->Bunolagus monticularis, the riverine rabbit of South Africa, is critically endangered. Of 10 subpopulations, none is estimated to have more than 50 individuals, according to the IUCN’s Red List of Threatened Species. Loss of habitat is the main threat.`,
+"Interesting Facts",
+`->A baby rabbit is called a kit, a female is called a doe and a male is called a buck.
+
+->Rabbits are very social creatures that live in groups. 
+
+->A rabbit's teeth never stop growing! 
+
+->Rabbits perform an athletic leap, known as a 'binky', when they're happy — performing twists and kicks in mid air!`,
+"Rabbit Animal",
+require("../assets/rabbit.png"),
+require("../assets/rabbit.png"),
+require("../assets/Rabbit.mp3")],
+"Rat":[
+"Play Audio",
+"IT IS A Rat",
+"lifespan",
+"2-5 years",
+"Main Prey",
+"Eggs, Nuts, Potatoes, Corn",
+"Predators",
+"Owls, Snakes, Raccoon, Cats",
+"Weight",
+"200-900g (0.4-2lbs)",
+"Diet",
+"Omnivore",
+"About",
+`->Rats are scavengers.
+
+->They have an excellent sense of taste and a good memory.
+
+->A rat can identify certain substances, including rat poisons, after just a tiny taste of it.`,
+"Size",
+`->According to the Integrated Taxonomic Information System (ITIS) there are more than 60 species of rat, which means they come in all sizes. They are typically 5 inches (12 centimeters), or longer, according to Encyclopedia Britannica. 
+
+->The largest species is the Bosavi woolly rat, which was discovered in 2009 in the rainforest of Papua New Guinea (and doesn't have a scientific name yet). It is about the size of a cat — 32.2 inches (82 cm) from nose to tail and weighs around 3.3 lbs. (1.5 kilograms), according to CNN. 
+
+->One of the smallest rats is Osgood’s Vietnamese rat. It is typically 5 to 7 inches (12 to 17 cm) long.
+
+->According to the Australian Broadcasting Corp., male rats are called bucks; females are does. Infants are called pups or kittens. A group of rats is called a mischief.`,
+"Habitat",
+`->Rats are found all over the world. For example, the rice-field rat is found in Southeast Asia, the Australian swamp rat is found in Eastern Australia, and the Norway rat, also called brown rats, is found on every continent of the world except Antarctica, according to the Animal Diversity Web at the University of Michigan. 
+
+->The brown and the house rat are the most common rats in the world because they have taken boats to every country over the past few centuries. House rats typically like warmer climates, while brown rats live in temperate climates. They typically live anywhere humans live. Many rat species also live in trees. `,
+"Habits",
+`->Overall, rats live to forage and mate. Most rats are nocturnal, though the brown rat is often awake day or night. 
+
+->Rats usually stick together in groups called packs. New packs are formed when a male and female go off on their own and nest in an area that doesn’t already contain a pack. Brown rats are usually led by the largest male in the pack. Other rats may have several dominant males or females in a pack.`,
+"Diet",
+`->Rats are omnivores, but many prefer meat when they can get it. House and brown rats usually use humans for their primary food source. They will scavenge through trash or eat any food that is left unprotected. 
+
+->Rats have also been known to eat grain or kill insects, water creatures such as snails, fish and mussels, small birds, mammals and reptiles for food. Other rats, such as the Sulawesi white-tailed rat and Hoffman’s rat, prefer vegetarian fair such as seed and fruits, according to Encyclopedia Britannica.`,
+"Offspring",
+`->Before their offspring are born, rats build nests from any material that can be foraged from the area, including branches, grass, trash and paper. These nests are usually built in crevices, in rotting trees or in buildings. 
+
+->Rats, generally, are baby-making machines. Female rats can mate around 500 times in a six-hour period and brown rats can produce up to 2,000 offspring in a year, according to Discover Magazine. Brown rats can have up to 22 young at once, though eight or nine is more the average. Tropical rats tend to only have one to six babies at once. 
+
+->After a gestation period of 21 to 26 days, babies that weigh only around 6 to 8 grams (.21 to .28 ounces) are born, according to the American Fancy Rat and Mouse Association. 
+
+->By the age of three months, the brown rat is ready to reproduce. Rats typically live around two or three years. Most house rats — 91 to 97 percent — die within their first year of life, according to the University of Michigan.`,
+
+"Classifications/Taxonomy",
+`->Here is the taxonomy of rats according to ITIS:
+
+• Kingdom: Animalia 
+
+• Subkingdom: Bilateria 
+
+• Infrakingdom: Deuterostomia 
+
+• Phylum: Chordata  
+
+• Subphylum: Vertebrata
+
+• Infraphylum: Gnathostomata 
+
+• Superclass: Tetrapoda 
+
+• Class: Mammalia 
+
+• Subclass: Theria 
+
+• Infraclass: Eutheria 
+
+• Order: Rodentia 
+
+• Suborder: Myomorpha 
+
+• Superfamily: Muroidea 
+
+• Family: Muridae 
+
+• Subfamily: Murinae 
+
+• Genus: Rattus
+
+->Species include:
+
+• Rattus argentiventer — Rice-field rat
+
+• Rattus hoffmanni — Hoffmann’s Sulawesi rat
+
+• Rattus lutreolus — Australian swamp rat
+
+• Rattus norvegicus — Norway rat, or brown rat
+
+• Rattus osgoodi — Osgood's Vietnamese rat
+
+• Rattus rattus — House rat, or black rat
+
+• Rattus xanthurus — Northeastern Xanthurus rat, or Sulawesi white-tailed rat`,
+"Interesting Facts",
+`->Rats Can Swim. 
+
+->Rats Are Revered in Some Cultures. 
+
+->Their Tails Keep Them Cool. 
+
+->A Rat's Teeth Never Stop Growing. 
+
+->There Are Many Different Types of Rats. 
+
+->Some Rats Get Pretty Big`,
+"Rat Detail",
+require("../assets/rat.png"),
+require("../assets/rat.png"),
+require("../assets/Mouse.mp3")],
+"Rhinoceros":[
+"Play Audio",
+"It is a Rhinoceroses",
+"lifespan",
+"35-50 years",
+"Main Prey",
+"Grass, Fruit, Berries, Leaves",
+"Predators",
+"Human, Wild cats",
+"Weight",
+"800-3,500kg (1,765-7,716lbs)",
+"Diet",
+"Herbivore",
+"About",
+`->Rhinoceroses are large, herbivorous mammals identified by their characteristic horned snouts.
+
+->The word "rhinoceros" comes from the Greek "rhino" (nose) and "ceros" (horn).
+
+->There are five species and 11 subspecies of rhino; some have two horns, while others have one.`,
+"Size",
+`->Rhinoceroses are large, herbivorous mammals identified by their characteristic horned snouts. The word "rhinoceros" comes from the Greek "rhino" (nose) and "ceros" (horn). There are five species and 11 subspecies of rhino; some have two horns, while others have one.
+
+->Because the animals' horns are used in folk medicine for their supposed healing properties, rhinos have been hunted nearly to extinction. Their horns are sometimes sold as trophies or decorations, but more often they are ground up and used in traditional Chinese medicine. 
+
+->The powder is often added to food or brewed in a tea in the belief that the horns are a powerful aphrodisiac, a hangover cure and treatment for fever, rheumatism, gout and other disorders, according to the International Rhino Foundation.`,
+"Habitat",
+`->White rhinos and black rhinos live in the grasslands and floodplains of eastern and southern Africa. Greater one-horned rhinos can be found in the swamps and rain forests of northern India and southern Nepal. Sumatran and Javan rhinos are found only in small areas of Malaysian and Indonesian swamps and rain forests.
+
+->Rhinos spend their days and nights grazing and only sleep during the hottest parts of the day. During the rare times when they aren't eating, they can be found enjoying a cooling mud soak. These soaks also help to protect the animals from bugs, and the mud is a natural sunblock, according to National Geographic.
+
+->Though rhinos are often solitary, they do occasionally form groups. Called crashes, these groups are made up of a female and her offspring. A dominant male rules over an area of land. The male will allow some sub-dominate males to live on his territory. Females roam freely around several different territories.`,
+"Habits",
+`->The Indian rhino is generally solitary, except when females are with their young. Loosely connected groups of a few individuals occur, especially in foraging areas or wallowing grounds. They feed mostly in the cool of the early morning, during the late afternoon or at night. 
+
+->During the day, they spend a lot of time in water or wallowing in mud in order to keep cool. Males have loosely defined territories which they do not defend well, and often such territories overlap. Occasionally there are aggressive interactions between rhino, with charges and horn clashes. Such fighting between males often causes death when the population numbers are high. 
+
+->Rhinos are known to make about 10 sounds, including snorts, honks and roars. Scent deposition is common, with large communal dung heaps often being formed.`,
+"Diet",
+`->Rhinoceroses are herbivores, which means they eat only vegetation. The type of vegetation they eat varies by species. This is because their snouts are different shapes to accommodate different types of food, according to National Geographic. 
+
+->For example, the black rhino eats trees or bushes because its long lips allow it to pick leaves and fruit from up high. The white rhino has a flat-shaped snout that lets it get closer to the ground for eatting grass`,
+"Offspring",
+`->Every two and a half to five years, a female rhino will reproduce. Female rhinos carry their young for a gestation period of 15 to 16 months. They usually only have one baby at a time, though they do sometimes have twins. At birth, baby rhinos, which are called calves, are still quite big, at 88 to 140 lbs. (40 to 64 kg), according to the San Diego Zoo.
+
+->At around 3 years old, the calf will set out on its own. A rhino can live up to 45 years.`,
+"Classifications/Taxonomy",
+`    • White rhinos: Ceratotherium simum (southern white rhinoceros), Ceratotherium cottoni (northern white rhinoceros). IUCN lists these as subspecies of Ceratotherium simum.
+
+• Sumatran rhinos: Dicerorhinus sumatrensis (also called hairy rhino, Asian two-horned rhino). Subspecies: Dicerorhinus sumatrensis harrisoni, Dicerorhinus sumatrensis lasiotis, Dicerorhinus sumatrensis sumatransis
+
+• Black rhinos: Diceros bicornSis (black rhino).Subspecies: Diceros bicornis bicornis, Diceros bicornis brucii, Diceros bicornis chobiensis, Diceros bicornis ladoensis, Diceros bicornis longipes, Diceros bicornis michaeli, Diceros bicornis minor, Diceros bicornis occidentalis
+
+• Javan rhinos: Rhinoceros unicornis
+
+• Greater one-horned rhinos: Rhinoceros sondaicus (also called Indian rhino). Subspecies: Rhinoceros sondaicus annamiticus, Rhinoceros sondaicus inermis, Rhinoceros sondaicus sondaicus
+`,
+"Interesting Facts",
+`->There are 5 species of rhin
+
+->They're HUGE.
+
+->Black and white rhinos are both, in fact, grey.
+
+->They're called bulls and cows.
+
+->Their horn is made from the same stuff as our fingernails.
+
+->Rhinos have poor vision.
+
+->Javan rhinos are only found in one small place.`,
+"About Rihnos",
+require("../assets/rihno.png"),
+require("../assets/rihno.png"),
+require("../assets/Rhinocero.mp3")],
+}
+};
+export default LearningMaterial;

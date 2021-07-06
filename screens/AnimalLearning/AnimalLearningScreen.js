@@ -16,7 +16,11 @@ import Accordion from"../../Accordion";
 import { LinearGradient } from "expo-linear-gradient";
 import PropTypes from "prop-types";
 import Learning from "../../constants/AnimalLearning";
+import GamePointContext from "../../context/GamePoints";
+import * as Speech from "expo-speech";
 const AnimalLearningscreen=(props)=> {
+	const {languageId,setLanguageId}=React.useContext(GamePointContext);
+	const [played,setPlayed]=useState(false);
 	const [id,setId]=useState(0);
 	const [AnimalName,setAnimalName]=useState("Dog");
 	const [sound, setSound] = useState();
@@ -34,6 +38,19 @@ const AnimalLearningscreen=(props)=> {
 			setPlaying(false);
 		}, 3000);
 	}
+
+	const speak = (val) => {
+		console.log(languageId);
+		setPlayed(true);
+		const thingToSay = `${Learning[languageId][val][1]}
+		${Learning[languageId][val][2]} : ${Learning[languageId][val][3]}
+		${Learning[languageId][val][4]} : ${Learning[languageId][val][5]}
+		${Learning[languageId][val][6]} : ${Learning[languageId][val][7]}
+		${Learning[languageId][val][8]} : ${Learning[languageId][val][9]}
+		${Learning[languageId][val][10]} : ${Learning[languageId][val][11]}
+		`;
+		Speech.speak(thingToSay,{rate:0.8,language:"hi-IN"});
+	};
 	useEffect(() => {
 		getData();
 		return sound
@@ -48,6 +65,7 @@ const AnimalLearningscreen=(props)=> {
 			const value = await AsyncStorage.getItem("@storage_Key");
 			if(value !== null) {
 				setId(value);
+				setLanguageId(value);
 			}
 		} catch(e) {
 			console.log(e);
@@ -56,6 +74,9 @@ const AnimalLearningscreen=(props)=> {
 			const value = await AsyncStorage.getItem("@AnimalName");
 			if(value !== null) {
 				setAnimalName(value);
+				if(played!==true){
+					speak(value);
+				}
 			}
 		} catch(e) {
 			console.log(e);

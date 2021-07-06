@@ -5,6 +5,8 @@ const DashboardConstant={0:
 		["Outlander",require("../assets/oddoneout.png")],
 		["Jumbled",require("../assets/jumbledWords.png")],
 		["Listen",require("../assets/listen.png")],
+		["State Animals",require("../assets/stateanimal.png")],
+		["Epics",require("../assets/Epics.png")],
 
 	],
 1:[
@@ -13,6 +15,8 @@ const DashboardConstant={0:
 	["बेमेल",require("../assets/oddoneout.png")],
 	["अव्यवस्थित",require("../assets/jumbledWords.png")],
 	["सुनें",require("../assets/listen.png")],
+	["State Animals",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 
 ],
 2:[
@@ -21,6 +25,8 @@ const DashboardConstant={0:
 	["আউটল্যান্ডার",require("../assets/oddoneout.png")],
 	["বিড়বিড়",require("../assets/jumbledWords.png")],
 	["শোনো",require("../assets/listen.png")],
+	["State Animals",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 ],
 3:[
 	["પક્ષીઓ",require("../assets/bird.png")],
@@ -28,6 +34,8 @@ const DashboardConstant={0:
 	["આઉટલેન્ડર",require("../assets/oddoneout.png")],
 	["ખળભળાટ મચી ગયો",require("../assets/jumbledWords.png")],
 	["સાંભળો",require("../assets/listen.png")],
+	["State Animals",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 ],
 4:[
 	["ಪಕ್ಷಿಗಳು",require("../assets/bird.png")],
@@ -35,6 +43,8 @@ const DashboardConstant={0:
 	["ಪಿಡಿಡಿ ಒಂದು .ಟ್",require("../assets/oddoneout.png")],
 	["ಅದಲುಬದಲು",require("../assets/jumbledWords.png")],
 	["ಕೇಳು",require("../assets/listen.png")],
+	["State Animals",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 ],
 5:[
 	["പക്ഷികൾ",require("../assets/bird.png")],
@@ -42,6 +52,8 @@ const DashboardConstant={0:
 	["വിചിത്രമായ ഒന്ന്",require("../assets/oddoneout.png")],
 	["ഇടറി",require("../assets/jumbledWords.png")],
 	["ശ്രദ്ധിക്കൂ",require("../assets/listen.png")],
+	["State Animals",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 ],
 6:[
 	["पक्षी",require("../assets/bird.png")],
@@ -49,6 +61,8 @@ const DashboardConstant={0:
 	["न जूळणारा बाहेर",require("../assets/oddoneout.png")],
 	["गोंधळ उडाला",require("../assets/jumbledWords.png")],
 	["ऐका",require("../assets/listen.png")],
+	["State Animals",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 ],
 7:[
 	["ପକ୍ଷୀଗଣ",require("../assets/bird.png")],
@@ -56,6 +70,8 @@ const DashboardConstant={0:
 	["ଅଦ୍ଭୁତ ଗୋଟିଏ",require("../assets/oddoneout.png")],
 	["ଜମ୍ବୁଲା |",require("../assets/jumbledWords.png")],
 	["ଶୁଣ",require("../assets/listen.png")],
+	["State Animals",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 ],
 8:[
 	["ਪੰਛੀ",require("../assets/bird.png")],
@@ -63,6 +79,8 @@ const DashboardConstant={0:
 	["ਅਜੀਬ ਬਾਹਰ",require("../assets/oddoneout.png")],
 	["ਜੰਬਲ",require("../assets/jumbledWords.png")],
 	["ਸੁਣੋ",require("../assets/listen.png")],
+	["State Animals",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 ],
 9:[
 	["پکي",require("../assets/bird.png")],
@@ -70,6 +88,8 @@ const DashboardConstant={0:
 	["بي جوڙ",require("../assets/oddoneout.png")],
 	["ٺڳيل",require("../assets/jumbledWords.png")],
 	["ٻڌو",require("../assets/listen.png")],
+	["States",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 ],
 10:[
 	["பறவைகள்",require("../assets/bird.png")],
@@ -77,6 +97,8 @@ const DashboardConstant={0:
 	["ஒற்றைப்படை ஒன்று",require("../assets/oddoneout.png")],
 	["தடுமாறியது",require("../assets/jumbledWords.png")],
 	["கேளுங்கள்",require("../assets/listen.png")],
+	["State Animals",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 ],
 11:[
 	["పక్షులు",require("../assets/bird.png")],
@@ -84,6 +106,8 @@ const DashboardConstant={0:
 	["బేసి ఒకటి",require("../assets/oddoneout.png")],
 	["గందరగోళంగా",require("../assets/jumbledWords.png")],
 	["వినండి",require("../assets/listen.png")],
+	["State Animals",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 ],
 12:[
 	["پرندے",require("../assets/bird.png")],
@@ -91,6 +115,8 @@ const DashboardConstant={0:
 	["عجیب سے باہر",require("../assets/oddoneout.png")],
 	["گڑگڑا ہوا",require("../assets/jumbledWords.png")],
 	["سنو",require("../assets/listen.png")],
+	["State Animals",require("../assets/stateanimal.png")],
+	["Epics",require("../assets/Epics.png")],
 ],
 };
 export default DashboardConstant;

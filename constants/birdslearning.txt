@@ -1,0 +1,514 @@
+/* eslint-disable indent */
+/* eslint-disable quotes */
+/* eslint-disable max-len */
+const LearningMaterial={0:{"Crow":["Play Audio",
+"IT IS A CROW",
+"Species",
+"40",
+"Biggest Crow",
+"Raven",
+"Weight",
+"12 to 57 ounces",
+"Found",
+"All over the world",
+"Feature",
+"Extremely intelligent bird",
+"About",
+`-> Crows are black birds known for their intelligence and
+adaptability, and for their loud, harsh "caw." They also
+have a reputation for damaging crops; however, their impact
+may be less than previously thought.
+
+-> The genus Corvus comprises crows, ravens and rooks. These
+birds are all part of the Corvidae family, which includes
+jays, magpies and nutcrackers.`,
+"Size",`There are about 40 species of crow, according to PBS, so
+there are many different sizes of crows. The American crow
+measures around 17.5 inches (45 centimeters). The fish crow
+measures around 19 inches (48 cm).
+
+-> The common raven is much larger and measures around 27 inches (69 cm). Crows can
+weigh anywhere from 12 to 57 ounces (337 to 1,625 grams).
+Rooks are smaller than crows and have distinct wedge-shaped
+tails and light-colored bills. They are of average 18 inches (47
+cm) long.
+
+->American crows differ from common ravens in several ways.
+Ravens are bigger; their voices are hoarser; and they have
+heavier bills, according to the University of Michigan's
+Animal Diversity Web (ADW). Ravens' tails and wings come to
+a point.`,"Habitate",`Crows can be found all over the world in a variety of
+habitats. For example, the American crow lives all over
+North America and prefers open areas — agricultural land and
+grasslands — with trees nearby. They also thrive in suburban
+neighborhoods, according to the ADW.
+
+->The common raven is one of the most widespread birds
+worldwide, according to the ADW. They are found in northern
+Europe, Scandinavia, Iceland and Greenland; throughout Asia,
+from the Pacific Ocean to the Himalayas to India and Iran;
+across northwestern Africa and the Canary Islands; and in
+North and Central America as far south as Nicaragua.
+
+->They prefer open landscapes, too — seacoasts, treeless tundra,
+rocky cliffs, mountain forests, open riverbanks, plains,
+deserts and scrubby woodlands.
+
+->Rooks are found across Europe and western Asia. They, too,
+prefer wide open spaces, river plains and steppes.`,"Habits",
+`Crows are extremely intelligent birds. They are known for
+their problem-solving skills and amazing communication
+skills.
+
+->In fact, research shows that crows don’t forget a face.
+Many types of crows are solitary, but they will often forage
+in groups. Others stay in large groups.
+
+->A group of crows is called a murder. When one crow dies, the murder will
+surround the deceased. This funeral isn’t just to mourn the
+dead, though.
+
+->The crows gather together to find out what
+killed their member. Then, the murder of crows will band
+together and chase predators in a behavior called mobbing.
+With some crow species, the yearlings and non-mating adults
+live in a group called a roosting community.
+
+->Some crows migrate while other crows don’t migrate in the
+common sense. They will travel to warmer areas of their
+territory, when needed.
+
+->American crows can be harmful to crops, but they also may
+prevent damage by eating insect pests, according to the ADW.
+Recent studies have shown that 60 to 90 percent of insects
+eaten by rooks are agricultural pests.
+
+->As foragers, they also clean up dead animals and garbage. In
+fact, crows are often blamed for overturning garbage cans;
+however, the real culprits are usually raccoons or dogs,
+according to the Washington Department of Fish and Wildlife.`,
+"Diet",
+`Crows are omnivores, which means they eat nearly anything.
+Crows eat small animals such as mammals, amphibians,
+reptiles, eggs and carrion.
+
+->They also eat insects, seeds, grains, nuts, fruit, non-insect arthropods, mollusks, worms
+and even other birds. Crows have also been noted eating
+garbage and store food in caches, short-term, in trees or on
+the ground, according to the ADW.`,"Offspring",
+`Crows are cooperative breeders, which means they often stay
+close to the place where they were born and help raise and
+defend the area’s young chicks. When it is time to have
+offspring, a mating pair will build a nest 15 to 60 feet
+(4.5 to 18 meters) above the ground using branches, twigs,
+hair, twine, bark, plant fibers, mosses, cloth and other
+materials. Nests are 1.5 to 2 feet (46 to 61 cm) in
+diameter, according to the Washington Department of Fish and
+Wildlife.
+
+->The female lays four to five eggs and incubates them for 18
+days. At four weeks, the chicks are able to leave the nest,
+though their parents still feed them until they are around
+60 days old. Crows can live up to 14 years.`,
+"Classification/Taxonomy",
+` Here is the taxonomy of crows, according to the Integrated
+Taxonomic Information System (ITIS):
+Kingdom: Animalia Subkingdom: Bilateria Infrakingdom:
+Deuterostomia Phylum: Chordata Subphylum: Vertebrata
+Infraphylum: Gnathostomata Class: Aves Superclass: Tetrapoda
+Order: Passeriformes Family: Corvidae Genus: Corvus Species:
+There are more than 30, including:
+
+Corvus brachyrhynchos (Ame
+Corvus caurinus (Northwe
+Corvus corax (co
+Corvus corone (ca
+Corvus coronoides (Austra
+Corvus cryptoleucus (Chihua
+Corvus florensis (F
+Corvus frugil
+Corvus hawaiiensis ('Alala, Haw
+Corvus imparatus (Me
+Corvus mellori (li
+Corvus ossifragus (fish crow)`,"Interesting Facts"
+,`->Crows are extremely intelligent birds.
+
+->Crows have been observed using basic tools.
+
+->Crows have an excellent memory.
+
+->Crows can be identified by their distinctive 'caw-caw' sound.
+
+->Carrion crows and Hooded crows were thought to be the same species.`,"Crow Details",
+require("../assets/crow.png"),
+require("../assets/crow.gif"),
+require("../assets/crow.mp3")
+],
+"Cuckoo":["Play Audio",
+"IT IS A CUCKOO",
+"Length",
+"32-34cm",
+"Wingspan",
+"58cm ",
+"Weight",
+"2.1 ounces",
+"Average lifespan",
+"4 years",
+"Eggs laid in season",
+"Between 12 & 22",
+"About",
+`->Cuckoo is a bird of the Cuculidae family. There are 54 species of cuckoo that can be found in the Europe, Asia, Africa and Australasia. Only 2 of 54 species live in Europe. Cuckoo inhabits open areas, such as marshes, meadows and fields, but it can be also found in woodlands and alpine areas. 
+
+->They are not listed as endangered, but their number in certain areas declined as a result of habitat loss, decrease in number of birds which act as foster parents to young cuckoos and because of the climate changes(which affect their migratory patterns and availability of food). `,
+"Size",
+`->Cuckoos are medium-sized birds that range in size from the little bronze cuckoo, at 17 g and 15 cm (6 inches), to the channel-billed cuckoo, at 630 g (1.4 lbs) and 63 cm (25 inches).[4] There is generally little sexual dimorphism in size, but where it exists, it can be either the male or the female that is larger.`
+,"Habitate",
+`->The cuckoo bird can be found pretty much anywhere with trees. They mainly inhabit deciduous and coniferous forests, woodland areas, meadows, scrubs, moorlands, lowlands and even wooded steppe. They are therefore distributed on a general scale all over the world except for Antarctica. 
+
+->They also refrain from dry or very cold areas like northernmost parts of North America, dry parts of Africa, the Middle East or Australia.
+
+->Since the cuckoo depends on other birds to raise its young, they inhabit close to their hosts. There are over 100 species that the cuckoo uses as hosts. They generally choose insectivorous songbirds like warblers, wagtails, flycatchers buntings or chats. Sometimes they will also choose fruit-eating birds. This is because the cuckoo is an insectivore itself.
+
+->Cuckoos are migratory birds. They fly south for the winter. From Europe, for example, they fly down to India, southeast Asia, the Middle East and parts of Africa. The exact locations of their migration depend on their species. They generally live solitary lives (with exception to breeding season). `,
+"Habits",
+`->The Cuckoo likes to habituate in farmland with hedges, woodland, moorland and marshes.
+
+->They feed on insects, insect larvae and a variety of other animals, as well as fruit.
+
+->Their favourite diet is hairy caterpillars, and they have been known to shake the toxins out before eating them`,
+"Diet",
+`-> Cuckoos eat large insects such as caterpillars, katydids, cicadas, and grasshoppers.
+
+->They seem to have a particular appetite for caterpillars such as fall webworms, tent caterpillars, and gypsy moths.
+
+->Individuals have often been found with more than 100 caterpillars in their stomach at once.`,
+"Offspring",
+`->For the care and feeding of its offspring, the common cuckoo outsources.
+
+->When she’s ready to lay an egg, a female Cuculus canorus swoops to the unattended nest of a smaller species. She then swallows one of the eggs that’s been laid there and lays one of her own—a behavior known as brood parasitism.
+
+->Sometimes potential victims revolt. The parents that inhabit the nest may mob the cuckoo mom, preventing her from dropping off her egg; they may push out cuckoo eggs before they hatch, or they may even abandon the nest.
+
+->But often the cuckoo mom gets away undetected, leaving her parental duties behind, and the nest’s owners return none the wiser.
+
+->When the cuckoo chick hatches, it ejects other eggs or hatchlings to get all the space—and food—for itself. Hungry as a whole brood, the outsize baby devours everything brought by its foster parents—in the photo above, the provider is a reed warbler, a common host.`,
+"Classification/Taxonomy",
+`->The species' binomial name is derived from the Latin cuculus (the cuckoo) and canorus (melodious; from canere, meaning to sing).[2][3] The cuckoo family gets its common name and genus name by onomatopoeia for the call of the male common cuckoo.[4] 
+->The English word "cuckoo" comes from the Old French cucu, and its earliest recorded usage in English is from around 1240, in the song Sumer Is Icumen In. The song is written in Middle English, and the first two lines are: "Svmer is icumen in / Lhude sing cuccu." In modern English, this translates to "Summer has come in / Loudly sing, Cuckoo!".[5]
+
+->There are four subspecies worldwide:
+
+C. c. canorus, the nominate subspecies, was first described by Carl Linnaeus in his landmark 1758 10th edition of Systema Naturae. It occurs from Ireland through Scandinavia, northern Russia and Siberia to Japan in the east, and from the Pyrenees through Turkey, Kazakhstan, Mongolia, northern China and Korea. It winters in Africa and South Asia.
+
+C. c. bakeri, first described by Hartert in 1912, breeds in western China to the Himalayan foothills in northern India, Nepal, Myanmar, northwestern Thailand and southern China. During the winter it is found in Assam, East Bengal and southeastern Asia.
+
+C. c. bangsi was first described by Oberholser in 1919 and breeds in Iberia, the Balearic Islands and North Africa, spending the winter in Africa.
+
+C. c. subtelephonus, first described by Zarudny in 1914, breeds in Central Asia from Turkestan to southern Mongolia. It migrates to southern Asia and Africa for the winter.`,
+"Interesting Facts",
+`->Cuckoos are birds of the medium size. They can reach 12.6 to 14.1 inches in length and weight up to 2.1 ounces. 
+
+->Cuckoo has long and pointed wings and long and thin beak. While flying, it resembles to hawk. 
+
+->Cuckoo feeds on insects and its favorite food is hairy caterpillar.
+
+->Cuckoo travels to Africa each September to avoid cold periods and lack of food during the winter in temperate areas of Europe and Asia.
+
+->Although cuckoo spends almost nine months in Africa, it never sings while there. 
+
+`,
+"Cuckoo Details",
+require("../assets/Cuckoo.png"),
+require("../assets/Cuckoo.gif"),
+require("../assets/koyal.mp3")
+],
+"Eagle":[
+"Play Audio",
+"IT IS A Eagle",
+"Main Prey",
+"Fish, Mammals, Reptiles",
+"Wingspan",
+"70cm - 250cm (27.5in - 98in)",
+"Favorite Food",
+"Fish",
+"Average Clutch Size",
+"2",
+"Predators",
+"Human, Hawk, Raccoon",
+"About",
+`->The sharp-eyed eagle is among the most fearsome predators of the animal kingdom.
+
+->Nicknamed the “king of all birds,” eagles are large and powerful birds of prey that appear to soar majestically in the air, searching for their next meal. Although not the most agile flyer, its remarkable speed in the air certainly belies its enormous size relative to other birds. 
+
+->Most species are well-protected by governments, conservation organizations, and international acts around the world, but a few of the more obscure species are in danger of extinction.`,
+"Size",
+`->The eagle is among the largest of all birds; only some condors and vultures can rival it in sheer size. The largest species of eagles, such as the harpy eagle and Steller’s sea eagle, weigh up to 20 pounds and display a wingspan of around 7 or 8 feet from tip to tip. 
+
+->Females actually tend to be larger than males on average, but it’s not entirely clear why; perhaps it’s to protect the chicks from danger while the male is away. In addition to their size, the eagles are further distinguished by their sharp, heavy beaks (which end in a downward-sloping point) and four big talons on each foot. 
+
+->They also have small projections on the bottom of their feet called “spicules” to grasp prey. Unlike the scavenging vulture, eagles also have a fully-feathered head, sometimes capped off in a luxurious-looking crest.`,
+"HABITATS",
+`->These birds are found all over the world in almost every single type of habitat, from the far northern tundra to tropical rainforests and deserts. 
+
+->Only two species, the bald eagle and golden eagle are common to North America, while nine species are endemic to Central and South America. The Eastern Hemisphere contains the greatest concentration of them, particularly in Africa. Many of the islands dotted throughout the Indian and Pacific Oceans even have their own distinct species as well.`,
+"Diet",
+`->These birds are apex predators in every ecosystem where it’s found. This is specifically reflected in its anatomy: thee birds have a sharp beak and talons are specifically adapted for ripping and tearing flesh. It is also not shy about scavenging for food left behind or killed by other animals. 
+
+->In fact, the bald eagle’s tendency to steal the kills of other birds once prompted Benjamin Franklin to say that it was a bird of “bad moral character” (though despite common belief, he did not propose that the turkey should be the national symbol of the United States instead). 
+
+->These birds are also a feast or famine type of bird since it can sometimes go several weeks in between meals.`,
+"Offspring",
+`->Following a brief courtship display, which can include an impressive aerial performance and synchronized behavior, these birds form exceptionally strong bond pairs that mate for life. This allows them to create and keep building upon the same nest year after year, usually in a high and inaccessible cliff or tree. 
+
+->These nests, which also go by the name of eyries, are usually composed out of sticks, moss, lichens, and other plant material. However, most of these birds only use the nest when they are actually raising their young and abandon it temporarily for the rest of the year.
+
+->Once the female lays her eggs, she incubates them for a month or two, while the father hunts and provides most of the food. These birds can produce anywhere between one and four eggs, but the larger, dominant chick may end up killing or out-competing the smaller one. While this may seem cruel, it is an effective strategy for ensuring that one chick almost always survives, especially since mortality rates are already quite high among the young.
+
+->They will usually grow their flight feathers after a few months, but since they have such long maturation periods, it may take up to three or four years before they become adults. The life expectancy of the typical species is around 20 to 30 years in the wild. As it ages, the bird begins to lose some of its hunting edge. In captivity, where it always has a guaranteed meal, these birds can sometimes live around 50 years of age.
+`,
+"Taxonomy",
+`Kingdom     Animalia
+
+Phylum        Chordata
+
+Class             Aves
+
+Order            Falconiformes
+
+Family           Accipitridae
+`,
+"Conservation Status",
+`->Most but not all species around the world appear to be in excellent health. The bald eagle is considered to be species of least concern by the IUCN Red List with perhaps more than 100,000 individuals remaining. 
+
+->This is a remarkable bounce back from the 1980s and 1990s when it was still on the endangered species list. The golden eagle is likewise a species of least concern with more than 100,000 individuals left. By contrast, the harpy eagle of Central and South America is near threatened and in decline. The steppe eagle of Central Asia is likewise in decline. Although there are some 50,000 to 75,000 adults remaining, it is listed by the IUCN Red List as an endangered species.
+`,
+"Interesting Facts",
+`->There are around 60 species of eagles around the world.
+
+->Eagles boast of a brilliant eyesight.
+
+->Eagles are at the top of their food chain.
+
+->'Bald' eagles are not really bald.
+
+->An eagle helped decide the location for Mexico city.`,
+"Eagle  Details",
+require("../assets/eagle.png"),
+require("../assets/eagle.png"),
+require("../assets/Eagle.mp3")
+
+],
+"Bat":[
+"Play Audio",
+"IT IS A Bat",
+"Main Prey",
+"Mice, Frogs, Fruit	",
+"Lifespan",
+"10 - 30 years",
+"Favorite Food",
+"Fish",
+"Average Litter Size	",
+"1",
+"Predators",
+"Owls, Eagles, Snakes	",
+"About",
+`->Bats are mammals of the order Chiroptera. With their forelimbs adapted as wings, they are the only mammals capable of true and sustained flight. Bats are more manoeuvrable than birds, flying with their very long spread-out digits covered with a thin membrane or patagium. `,
+"Size",
+`->The smallest bat is Kitti's hog-nosed bat (Craseonycteris thonglongyai), which is 29–34 mm (1+1⁄8–1+3⁄8 in) long with a 150-millimetre (6 in) wingspan and weighs 2–2.6 g (1⁄16–3⁄32 oz).[111][112] It is also arguably the smallest extant species of mammal, next to the Etruscan shrew.[113] 
+
+->The largest bats are a few species of Pteropus megabats and the giant golden-crowned flying fox, (Acerodon jubatus), which can weigh 1.6 kg (3+1⁄2 lb) with a wingspan of 1.7 m (5 ft 7 in).[114] Larger bats tend to use lower frequencies and smaller bats higher for echolocation; high-frequency echolocation is better at detecting smaller prey. 
+
+->Small prey may be absent in the diets of large bats as they are unable to detect them.[115] The adaptations of a particular bat species can directly influence what kinds of prey are available to it.`,
+"Habitats",
+`->Bats live on many continents including Asia, North America, South America, Africa, Europe and Australia. However, there are no bats living in Antarctica because they prefer warm climates.
+
+->When you think of a bat’s home, you may imagine a colony of bats hanging from the ceiling of a cave. Bats also live in trees, under bridges, in burrows and even in manmade bat houses. They choose a place to roost where they’ll be hidden from predators and able to sleep during the day. Bats wrap their flexible wings around them when they sleep.
+
+->Some bats migrate to warmer places for the winter months. These flying mammals hibernate from about October or November until spring arrives in March. A bat living in a place where the temperature doesn’t fall below 45 degrees may not migrate to a warmer climate.`,
+"Diet",
+`->Many bats eat insects such as mosquitoes,moths, cockroaches and beetles. A little brown bat can eat 500 insects in one hour. A colony of bats can consume 500,000 pounds of bugs per night. 500,000 pounds of bugs is equal to the weight of two blue whales!
+
+->Bats use echolocation to find their prey. As a bat flies, it lets out high-pitched squeaks and clicks that humans can’t hear. When the soundwaves created by a bat’s squeak hit an object, the sound echoes back to the bat. Think of echolocation as a bat’s personal radar system.
+
+->Other bats have a diet of nectar. These bats drink nectar from flowers just as hummingbirds do. Some bats eat fruit by sucking the juices of a ripe piece of fruit and spitting out the seeds. In addition, there are bats that eat fish. They fly over the water grabbing fish with their claws.
+
+->You’re probably familiar with the vampire bat. There are three types of these bats that drink blood from mammals such as cows or birds. They are found in South America and Mexico. It’s a myth that vampire bats suck the blood from these animals. Instead, they bite a cow, a sheep or a bird while it’s sleeping and lick the blood as it seeps out of the animal’s leg or other body part. This bat only takes in about two teaspoons of an animal’s blood.
+`,
+"Offspring",
+`->Did you know a bat can sing? Male bats sing and unfold their wings to attract female bats during mating season. Unfortunately, people can’t hear the high-pitched song of bats. A male bat marks its territory during mating time with liquid from its scent glands. Bats swarm during this time allowing them to find a mate. A female bat can be pregnant for 40 days or six months depending on its species. Most have one baby, once a year.
+
+->A mother bat gives birth to its baby or pup while she is hanging upside down. She must catch her pup with her wings after it’s born! A pup weighs about ¼ of the total weight of its mother. So, if a pup’s mom weighs one pound, the baby weighs just ¼ of a pound. A pup of this size is not quite as heavy as a hamster. A pup is born blind and without hair. 
+
+->It drinks milk from its mother for up to six months and clings to her as she flies. After six months, a mother teaches its pup to fly and hunt for food. Once a pup learns these skills, it’s able to survive on its own.
+
+->Depending on its species, a bat can live from 5 to 30 years. Scientists have observed that hibernating bats have a tendency to live longer than non-hibernating ones. In many species of bat, females live longer than males. The oldest bat on record lived to be 41 years old!
+
+->A disease known as White-nose syndrome is responsible for killing both young and older bats as they hibernate. This disease takes away from a bat’s store of fat as it sleeps. This can cause the bat to wake up and fly out of the cave in search of food. Chances are that the weakened bat will starve because the supply of insects is low in the wintertime.
+`,
+"Taxonomy",
+`->The delicate skeletons of bats do not fossilise well; it is estimated that only 12% of bat genera that lived have been found in the fossil record.[6] Most of the oldest known bat fossils were already very similar to modern microbats, such as Archaeopteropus (32 million years ago).[7] The extinct bats Palaeochiropteryx tupaiodon (48 million years ago) and Hassianycteris kumari (48 million years ago) are the first fossil mammals whose colouration has been discovered: both were reddish-brown.[8][9]
+
+->Bats were formerly grouped in the superorder Archonta, along with the treeshrews (Scandentia), colugos (Dermoptera), and primates.[10] Modern genetic evidence now places bats in the superorder Laurasiatheria, with its sister taxon as Fereuungulata, which includes carnivorans, pangolins, odd-toed ungulates, even-toed ungulates, and cetaceans.[11][12][13][14][15] One study places Chiroptera as a sister taxon to odd-toed ungulates (Perissodactyla).`,
+
+"Conservation Status	",
+`->There are over 1,300 species of bats throughout the world. The highest concentration of bat species live near the equator. The conservation status of bats is: Least Threatened and the population is holding fairly steady. However, conservation efforts are always in place for bats because most have just one pup per year.`,
+
+"Interesting facts",
+`->Bats can live more than 30 years and can fly at speeds of 60 miles per hour (or more!).
+
+->Bats can find their food in total darkness.
+
+->Bats can eat up to 1,200 mosquitoes an hour.
+
+->Some bats hibernate in caves through the cold winter months.
+
+->Baby bats are called pups!
+`,
+"Bats  Details",
+require("../assets/bat.png"),
+require("../assets/bat.png"),
+require("../assets/bat.mp3")
+],
+"Duck":[
+"Play Audio",
+"IT IS A Duck",
+"Main Prey",
+"Insects, Frogs,Plants,Shellfish",
+"Fun Facts",
+"Rows of tiny plates line their teeth!",
+"Favorite Food",
+"Insects",
+"Wingspan	",
+"60cm - 80cm (24in - 31in)	",
+"Lifespan",
+"4 - 8 years",
+"About",
+`->Ducks are omnivorous eating plants, insects, small fish, seeds, and crustaceans. A duck is a bird known as a waterfowl because they live near ponds, rivers, and lakes. This animal lives on every continent except Antarctica. Some of them live in freshwater habitats while others live in saltwater. They have a lifespan of up to 10 years.
+`,
+"Size",
+`->Weight - Weight of Ducks varies according to Species and Gender. A Domestic Drake generally weighs 1–5 kg and Ducks 1-2 kg. The Smallest Species weighs no more than 0.5 pounds (0.2 kilograms) while the Largest weighs up to 49 pounds (22.5 kilograms).
+
+->Height - Height of Ducks varies according to Species and Gender. On an Average their height is about 5 inches or 4 inches. A Domestic Ducks length stands from up to 60 cm. in Height. The Smallest Species stands 13 inches (33 centimetres) and the Largest Species is 6 feet (1.8 meters) in length.`,
+"Habitats",
+`->These birds live throughout the world except in Antarctica. Some species live in the tropics while others live in temperate climates. They live near rivers, ponds, lakes, and streams. They sometimes sleep in a nest made in tall grass near a body of water. Other times they sleep while actually floating on the water!
+
+->Some species in northern regions of North America migrate in the fall because food starts to become scarce at that time of year. These birds may migrate to a warm area in the southern part of the United States or further on to Mexico. Some species go to central California for the winter. The change of daylight in the springtime serves as a signal for ducks to fly north again.
+`,
+"Habits",
+`->Shovelers – these ducks have broad beaks and sift their food for insects, nails and seed from the mud.
+
+->Diving ducks and Sea ducks forage deep underwater. To be able to submerge more easily, the diving ducks are heavier than dabbling ducks and therefore have more difficulty taking off to fly. These ducks have long and narrow beaks. Their narrow beaks are also covered will saw-like edges which help them to grab fish.
+
+->Dabbling ducks feed on the surface of water or on land, or as deep as they can reach by up-ending without completely submerging. Their beaks are broad and short. Dabbling ducks have tiny rows of plates along the inside of the beak called ‘lamellae’ like a whales baleen. 
+
+->These let them filter water out of the side of their beaks and keep food inside. Dabbling ducks eat plants, seeds, grasses and other small insects and animals that they find on or under the water. Usually they stick their tails in the air and stretch their heads into the water to reach their food.
+
+->Dabblers usually have shiny coloured patches on their wings. The domestic ducks are dabblers too. They are descendents of the Mallards. Dabbling ducks take off from the water in quick jumps. Ducks with longer necks dive with their head down into the shallow water and pick up their food.
+`,
+"Diet",
+`->These birds are omnivores. They eat the food source that is most abundant in their habitat.
+
+->These birds eat insects, fruit, seeds, algae, small fish, and crustaceans.
+
+->Have you ever seen a duck’s rear end sticking up out of the water? This happens when a dabbling duck tips its head underwater to filter through the sandy bottom of a creek or pond looking for food.
+
+->Other types of ducks dive beneath the surface for food while others find prey floating on the surface.
+`,
+"Offspring",
+`->These birds begin to choose their mates in the month of December. A female chooses a male out of a large group. She looks for a mate with beautiful, healthy plumage. Some of the courtship rituals include bobbing heads, making whistling sounds, and swimming around one another. Drakes call to females and make sounds trying to get as much attention as possible. This is a noisy time for ducks! Males and females pair up for one season but find a different mate the next breeding season. This is called seasonal monogamy.
+
+->The female builds a nest made of sticks, grass, and feathers near a pond or lake. The gestation period of these birds is 28 days. Incidentally, the gestation period is the same for Canadian geese. They lay eggs starting in mid-March through the end of July. There are usually 12 eggs in a clutch. Duck eggs are fairly large weighing about two and a half ounces. After the eggs are laid, the male doesn’t contribute to their care.
+
+->It takes about 24 hours for all of the eggs in a clutch to hatch. Baby ducks are called ducklings. Immediately after hatching, a duckling’s feathers begin to dry, and it starts wiggling its legs. About ten hours later, the mother directs her babies out of the nest and leads them to the water. That’s quick!
+
+->The ducklings stay with their mother as they learn how to swim and how to find food in the water. She protects them from other ducks and keeps them warm on cold evenings. At 50 to 60 days old, the ducklings are able to fly and live independently.
+
+->These birds become sexually mature at one year old. They have a lifespan of 5 to 10 years. The record for the oldest duck is 29 years old.
+
+->These birds are vulnerable to illnesses such as duck virus hepatitis, aspergillosis and colibacillosis.
+`,
+"Taxonomy",
+`Kingdom   Animalia
+
+Phylum     Chordata
+
+Class          Aves
+
+Order         Anseriformes
+
+Family        Anatidae
+`,
+"Interesting Facts",
+`->Ducks are omnivorous and will eat grass, aquatic plants, insects, seeds, fruit, fish, crustaceans and other types of food.
+
+->Ducklings younger than 10 days tend to swim and walk as a group, always close to their mother, to avoid the attack of predators.
+
+->Ducks can live up to 20 years, depending on the species and if well cared for.
+
+->Ducks are outgoing, social animals who feel most at ease when they're in a larger group of other ducks.
+
+`,	"Duck  Details",
+require("../assets/duck.png"),
+require("../assets/duck.png"),
+require("../assets/duck.mp3")
+],
+"Owl":[
+"Play Audio",
+"IT IS A Owl",
+"Main Prey",
+"Small mammals, Fish, Birds",
+"Habitat",
+"Open plains and low-lying woodland",
+"Favorite Food",
+"Small mammals	",
+"Wingspan	",
+"75cm - 110cm (30in - 43in)	",
+"Lifespan",
+"5 - 10 years",
+"About",
+`->The Barn Owl is a medium-sized raptor, a nocturnal bird of prey like other owls. Raptors have strong grasping talons for killing prey, and a hooked upper beak for tearing meat. The Barn Owl has a white heart-shaped face and white chest with small brown spots.`,
+"Size",
+`->The male and female display similar plumage, but females are larger, darker, and more spotted than males. They are 32-40 cm (13-16 in) tall, which is smaller than the size of a Red-tailed Hawk. The wingspan is 100-125 cm (39-49 in) - about the armspan of a child`,
+"Habitats",
+`->The many subspecies of these owls can be found all over the world in various habitats. They are an adaptable species that can live in most environments, from desert to lush farmland.
+->Because these owls nest in barns and other abandoned buildings, they are comfortable living in cities, suburbs, and other places that put them in close contact with human beings.
+`,
+"Diet",
+`->These owls are birds of prey, and they mostly target rats and mice. Sometimes, by dissecting pellets, scientists have found the occasional frog, smaller bird species, or even fish.
+->Some of these owl species survive on an insect-based diet. These owls are smaller, island-dwelling species. Where they live, large food options tend to be scarce, so these owl subspecies have adapted to the environment.
+`,
+"Offspring",
+`->Male owls opt for a mid-flight display when they are ready to mate with a female. These maneuvers include “moth flight,” which is a maneuver in which male owls hover in midair in front of the female.
+->These owls can lay up to 2 nests per year and can breed year-round. They remain in one territory once they mate, and about 75% of all barn owls mate for life. These pair do “divorce” if they cannot produce enough young owlets together. When preparing to lay eggs, barn owls choose trees closer to the large, open fields where they enjoy hunting.
+->Females lay anywhere from 2 to 12 eggs, and the egg-laying takes place over multiple days. This spacing is so that the owlets do not hatch all at once. If food is abundant, the female will lay more eggs. Each egg incubates for about 30 days. Chicks leave the nest after the parents have cared for them for about 15 weeks.
+`,
+"Taxonomy",
+`->The ashy-faced owl (T. glaucops) was for some time included in T. alba. Based on DNA evidence, König, Weick & Becking (2009) recognised the American barn owl (T. furcata) and the Curaçao barn owl (T. bargei) as separate species.[8] 
+->They also proposed that T. a. delicatula should be split off as a separate species, to be known as the eastern barn owl, which would include the subspecies T. d. delicatula, T. d. sumbaensis, T. d. meeki, T. d. crassirostris, and T. d. interposita.[21] The International Ornithological Committee has its doubts and has stated that the split of Tyto delicatula from T. alba "may need to be revisited".[22]
+->Some island subspecies are occasionally treated as distinct species, a move which should await further research into barn owl phylogeography. According to Murray Bruce in Handbook of Birds of the World Volume 5: Barn-owls to Hummingbirds, "a review of the whole group [is] long overdue".[4] 
+->Molecular analysis of mitochondrial DNA shows a separation of the species into two clades, an Old World alba and a New World furcata, but this study did not include T. a. delicatula, which the authors seem to have accepted as a separate species. Extensive genetic variation was also found between the Indonesian T. a. stertens and other members of the alba clade, leading to the separation of stertens into Tyto javanica.[23]
+->Twenty to thirty subspecies are usually recognized, varying mainly in body proportions, size, and colour. Barn owls range in colour from the almost beige-and-white nominate subspecies alba, erlangeri, and niveicauda, to the nearly black-and-brown contempta. 
+->Island forms are mostly smaller than mainland ones, and those inhabiting forests have darker plumage and shorter wings than those living in open grasslands. Several subspecies are generally considered to be intergrades between more distinct populations.`,
+"Conservation Status",
+`->The Barn Owl is considered endangered at this point in time. They have a lower population to begin with than other species of owls. They too suffer due to the destruction of their natural habitat. They continue to have to try to find food and it gets harder and harder for them to find it.`,
+"Interesting Facts",
+`1. Owls can turn their heads almost all the way around—but not quite.
+
+2. Owls have far-sighted, tubular eyes.
+
+3. Owls have super-powered hearing.
+
+4. Owl flight is slient.
+
+5. Owls swallow prey whole, then barf up the indigestible bits.
+`,
+"Owls Details",
+
+require("../assets/owl.png"),
+require("../assets/owl.png"),
+require("../assets/owl.mp3")
+]
+},
+
+};
+export default LearningMaterial;

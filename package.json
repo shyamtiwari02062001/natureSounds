@@ -23,7 +23,8 @@
     "react-native-gesture-handler": "~1.8.0",
     "react-native-restart": "0.0.22",
     "react-native-screens": "~2.15.2",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "expo-speech": "~8.5.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",

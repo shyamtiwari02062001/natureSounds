@@ -11,8 +11,11 @@ import {
 } from "react-native";
 import AnimalsList from "../../constants/AnimalList";
 import { LinearGradient } from "expo-linear-gradient";
+import GamePointContext from "../../context/GamePoints";
 import PropTypes from "prop-types";
 const AnimalListScreen=(props)=>{
+	// eslint-disable-next-line no-unused-vars
+	const {gamePoint,setGamePoint}=React.useContext(GamePointContext);
 	const [id,setId]=useState(0);
 	const getData = async () => {
 		try {
@@ -45,6 +48,51 @@ const AnimalListScreen=(props)=>{
 					justifyContent: "space-evenly",
 				}}
 			>
+				<View
+					style={{
+						flexDirection: "row",
+						backgroundColor: "#050637",
+						width: Dimensions.get("window").width,
+						justifyContent: "space-between",
+					}}
+				>
+					<View style={{ marginLeft: "5%", marginTop: "7%" }}>
+						<TouchableOpacity
+							onPress={() =>
+								props.navigation.navigate("Dashboard")}
+						>
+							<Image
+								source={require("../../assets/back.png")}
+								style={{
+									height: 20,
+									width: 20,
+									tintColor: "white"
+								}}
+							/>
+						</TouchableOpacity>
+					</View>
+					<View
+						style={{
+							marginTop: "7%",
+							flexDirection: "row",
+							position: "relative",
+							alignItems: "center",
+							marginRight: 20,
+						}}
+					>
+						<Image
+							source={require("../../assets/coin.png")}
+							style={{ height: 20, width: 20 }}
+						/>
+						<Text style={{
+							color: "white",
+							fontSize: 20,
+							paddingLeft: 10
+						}}>
+							{gamePoint}
+						</Text>
+					</View>
+				</View>
 				<ScrollView
 					showsVerticalScrollIndicator={false}
 					showsHorizontalScrollIndicator={false}>
@@ -53,14 +101,16 @@ const AnimalListScreen=(props)=>{
 						flexDirection:"row",
 						justifyContent:"center"
 					}}>
-						<View style={{marginBottom:"5%"}}>
+						<View style={{
+							marginBottom:"20%",marginTop:"10%",padding:5
+						}}>
 							{(AnimalsList[id].map((val,index)=>
 								(index%2===0)&&<View key={index}
 									style={styles.view}>
 									<TouchableOpacity style={styles.shape}
 										onPress={()=>{
 											// eslint-disable-next-line max-len
-											storeData(AnimalsList[id][index][0]);
+											storeData(AnimalsList[0][index][0]);
 											// eslint-disable-next-line max-len
 											props.navigation.navigate("AnimalLearning");
 										}}>
@@ -73,14 +123,16 @@ const AnimalListScreen=(props)=>{
 							)
 							)}
 						</View>
-						<View style={{marginBottom:"5%"}}>
+						<View style={{
+							marginTop:"10%",marginBottom:"20%",padding:5
+						}}>
 							{(AnimalsList[id].map((val,index)=>
 								(index%2!==0)&&<View key={index}
 									style={styles.view}>
 									<TouchableOpacity style={styles.shape}
 										onPress={()=>{
 											// eslint-disable-next-line max-len
-											storeData(AnimalsList[id][index][0]);
+											storeData(AnimalsList[0][index][0]);
 											// eslint-disable-next-line max-len
 											props.navigation.navigate("AnimalLearning");
 										}}>
@@ -101,7 +153,7 @@ const AnimalListScreen=(props)=>{
 };
 const styles = StyleSheet.create({
 	image:{
-		height:125,
+		height:150,
 		width:150
 	},
 	text:{textAlign:"center",

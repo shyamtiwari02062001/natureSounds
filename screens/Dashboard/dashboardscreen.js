@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {useState,useEffect} from "react";
 import {
 	View,
@@ -8,15 +9,26 @@ import {
 	ScrollView,
 	Modal,
 	AsyncStorage,
-	Image
+	Image,
+	Alert
 } from "react-native";
+import GamePointContext from "../../context/GamePoints";
 import DashboardData from "../../constants/Dashboard";
 import PropTypes from "prop-types";
 import * as Animatable from "react-native-animatable";
 import Languages from "../../constants/language";
 const DashboardScreen = (props) => {
+	const {
+		gamePoint,
+		setGamePoint,
+		setLanguageId,
+		setAdditionData,
+	}=React.useContext(GamePointContext);
 	const [modalVisible, setModalVisible] = useState(false);
 	const [id,setId]=useState(0);
+	const [disable,setDisabled]=useState(false);
+	// eslint-disable-next-line prefer-const
+	let [time,setTime]=useState(1800);
 	const storeData = async (value) => {
 		try {
 			await AsyncStorage.setItem("@storage_Key", value);
@@ -29,14 +41,87 @@ const DashboardScreen = (props) => {
 			const value = await AsyncStorage.getItem("@storage_Key");
 			if(value !== null) {
 				setId(value);
+				setLanguageId(value);
 			}
 		} catch(e) {
 			console.log(e);
 		}
 	};
+	const fetchData = async () => {
+		try {
+			const jsonValue = await AsyncStorage.getItem("@AdditionData");
+			setAdditionData(JSON.parse(jsonValue));
+		} catch(e) {
+		// error reading value
+			console.log("It was not saved successfully");
+		}
+	};
+	const retrieveData = async () => {
+		try {
+			const value = await AsyncStorage.getItem("@MySuperStore:key");
+			if (value !== null) {
+				const val=parseInt(value);
+				setGamePoint(val);
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	};
+	const retrieveTime = async () => {
+		try {
+			const value = await AsyncStorage.getItem("@Time");
+			if(value !== null) {
+				const val=parseInt(value);
+				timer(val);
+			}
+			if(value===null){
+				timer(1800);
+			}
+		} catch(e) {
+			console.log(e);
+		}
+	};
+	const storeTime = async (value) => {
+		try {
+			await AsyncStorage.setItem("@Time", value);
+		} catch (e) {
+			console.log(e);
+		}
+	};
+	const timer=(val)=>{
+		setTimeout(()=>{
+			if(val!==0){
+				setTime(val);
+				storeTime(`${val}`);
+				timer(val-1);
+			}
+			if(val===0){
+				alert();
+				setDisabled(true);
+			}
+		},1000);
+	};
+	const alert = () =>
+		Alert.alert(
+			"Info",
+			"Times up visit again after 2 hours",
+			[
+				{
+					text: "Cancel",
+					onPress: () => console.log("Cancel Pressed"),
+					style: "cancel"
+				},
+				{ text: "OK", onPress: () => console.log("OK Pressed") }
+			]
+		);
 	useEffect(()=>{
+		retrieveTime();
 		getData();
-	});
+		fetchData();
+		setTimeout(()=>{
+			retrieveData();
+		},2000);
+	},[]);
 	const redirect=(index)=>{
 		if(index===0){
 			props.navigation.navigate("BirdList");
@@ -53,11 +138,24 @@ const DashboardScreen = (props) => {
 		if(index===4){
 			props.navigation.navigate("Listen");
 		}
+		if(index===5){
+			props.navigation.navigate("EndangeredAnimal");
+		}
+		if(index===6){
+			props.navigation.navigate("EpicsAnimal");
+		}
 	};
 	return(
 		<View style={{backgroundColor:"#7CFFCB",flex:1}}>
-			<View style={{flex:1}}>
+			<View style={{flex:1,
+				flexDirection:"row",
+				justifyContent:"space-around"}}
+			>
+				<Text style={{fontSize:20,marginTop:30}}>
+					{Math.trunc(time/60)}:{Math.trunc((time%60))}
+				</Text>
 				<TouchableOpacity
+					disabled={disable}
 					style={{marginTop:20}}
 					onPress={() => setModalVisible(true)}
 				>
@@ -68,6 +166,24 @@ const DashboardScreen = (props) => {
 						style={styles.language}>{Languages[id]}
 					</Text>}
 				</TouchableOpacity>
+				<View
+					style={{marginBottom:"13%",
+						flexDirection: "row",
+						alignItems:"center"
+					}}
+				>
+					<Image
+						source={require("../../assets/coin.png")}
+						style={{ height: 20, width: 20 }}
+					/>
+					<Text style={{
+						fontSize: 20,
+						color:"black",
+						paddingLeft: 10
+					}}>
+						{gamePoint}
+					</Text>
+				</View>
 			</View>
 
 			<Modal
@@ -113,6 +229,8 @@ const DashboardScreen = (props) => {
 							style={styles.buttonContainer}
 						>
 							<TouchableOpacity style={styles.button}
+								disabled={disable}
+
 								onPress={()=>{redirect(0);}}
 							>
 								<Image source={DashboardData[id][0][1]}
@@ -132,6 +250,8 @@ const DashboardScreen = (props) => {
 							style={styles.buttonContainer}
 						>
 							<TouchableOpacity style={styles.button}
+								disabled={disable}
+
 								onPress={()=>{redirect(1);}}
 							>
 								<Image source={DashboardData[id][1][1]}
@@ -148,11 +268,13 @@ const DashboardScreen = (props) => {
 							</TouchableOpacity>
 						</View>
 					</View>
-					<View style={{alignItems:"center"}}>
+					<View style={styles.view}>
 						<View
 							style={styles.buttonContainer}
 						>
 							<TouchableOpacity style={styles.button}
+								disabled={disable}
+
 								onPress={()=>{redirect(2);}}
 							>
 								<Image source={DashboardData[id][2][1]}
@@ -168,13 +290,13 @@ const DashboardScreen = (props) => {
 								</Text>
 							</TouchableOpacity>
 						</View>
-					</View>
-					<View style={styles.view}>
 						<View
 							style={styles.buttonContainer}
 						>
 							<TouchableOpacity style={styles.button}
 								onPress={()=>{redirect(3);}}
+								disabled={disable}
+
 							>
 								<Image source={DashboardData[id][3][1]}
 									style={{
@@ -189,10 +311,14 @@ const DashboardScreen = (props) => {
 								</Text>
 							</TouchableOpacity>
 						</View>
+					</View>
+					<View style={styles.view}>
 						<View
 							style={styles.buttonContainer}
 						>
 							<TouchableOpacity style={styles.button}
+								disabled={disable}
+
 								onPress={()=>{redirect(4);}}
 							>
 								<Image source={DashboardData[id][4][1]}
@@ -205,6 +331,51 @@ const DashboardScreen = (props) => {
 								<Text
 									style={styles.text}>
 									{DashboardData[id][4][0]}
+								</Text>
+							</TouchableOpacity>
+						</View>
+						<View
+							style={styles.buttonContainer}
+						>
+							<TouchableOpacity style={styles.button}
+								disabled={disable}
+
+								onPress={()=>{redirect(5);}}
+							>
+								<Image source={DashboardData[id][5][1]}
+									style={{
+										height:100,
+										width:100,
+										alignItems:"center"
+									}}
+								/>
+								<Text
+									style={styles.text}>
+									{DashboardData[id][5][0]}
+								</Text>
+							</TouchableOpacity>
+						</View>
+					</View>
+
+					<View style={styles.view}>
+						<View
+							style={styles.buttonContainer}
+						>
+							<TouchableOpacity style={styles.button}
+								disabled={disable}
+
+								onPress={()=>{redirect(6);}}
+							>
+								<Image source={DashboardData[id][6][1]}
+									style={{
+										height:100,
+										width:100,
+										alignItems:"center"
+									}}
+								/>
+								<Text
+									style={styles.text}>
+									{DashboardData[id][6][0]}
 								</Text>
 							</TouchableOpacity>
 						</View>

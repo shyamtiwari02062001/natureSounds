@@ -1,10 +1,18 @@
 const AnimalList={0:[
 	["Dog",require("../assets/dog.png")],
 	["Cat",require("../assets/cat.png")],
+	["Lion",require("../assets/lion.png")],
+	["Rabbit",require("../assets/rabbit.png")],
+	["Rat",require("../assets/rat.png")],
+	["Rhinoceros",require("../assets/rihno.png")],
 ],
 1:[
 	["कुत्ता",require("../assets/dog.png")],
 	["बिल्ली",require("../assets/cat.png")],
+	["शेर",require("../assets/lion.png")],
+	["खरगोश",require("../assets/rabbit.png")],
+	["चूहा",require("../assets/rat.png")],
+	["गैंडा",require("../assets/rihno.png")],
 ],
 2:[
 	["কুকুর",require("../assets/dog.png")],

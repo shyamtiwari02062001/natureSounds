@@ -6,20 +6,24 @@ import {
 	StyleSheet,
 	Image,
 	Dimensions,
-	AsyncStorage
+	AsyncStorage,
+	Pressable
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import PropTypes from "prop-types";
 import { Audio } from "expo-av";
 import jumbledWords from "../../constants/jumbledWords";
+import PopUp from "../../components/PopUp";
+import GamePointContext from "../../context/GamePoints";
 const Main = (props) => {
+	const {gamePoint,setGamePoint}=React.useContext(GamePointContext);
 	// eslint-disable-next-line prefer-const
 	let [answeres, setAnswers] = useState([]);
 	const [success, setSuccess] = useState("");
 	const [sound, setSound] = React.useState();
 	const [id,setId]=useState(0);
 	// eslint-disable-next-line prefer-const
-	let [gameLevel,setGamelevel]=useState(0);
+	let [gameLevel,setGameLevel]=useState(0);
 	// eslint-disable-next-line prefer-const
 	let [count, setCount] = useState(0);
 	// eslint-disable-next-line prefer-const
@@ -39,12 +43,15 @@ const Main = (props) => {
 		if (answeres.length === correct.length) {
 			for (let i = 0; i < answeres.length; i++) {
 				if (correct[i] === answeres[i]) {
-					setSuccess("true");
+					setSuccess(true);
 				} else {
 					setSuccess("wrong");
 					break;
 				}
 			}
+		}
+		if(success===true){
+			PlaySound();
 		}
 	};
 	const changeAnswere = (index) => {
@@ -54,7 +61,7 @@ const Main = (props) => {
 			setAnswers(answeres.filter((answere) => answere != val));
 			alphabets.push(val);
 			setAlphabet(alphabets);
-			setSuccess("false");
+			setSuccess(false);
 		}
 	};
 	// eslint-disable-next-line func-style
@@ -78,6 +85,16 @@ const Main = (props) => {
 			console.log(e);
 		}
 	};
+	const storesData = async (input) => {
+		try {
+			await AsyncStorage.setItem(
+				"@MySuperStore:key",
+				input
+			);
+		} catch (error) {
+			console.log(error);
+		}
+	};
 	useEffect(() => {
 		getData();
 		return sound
@@ -87,6 +104,29 @@ const Main = (props) => {
 			}
 			: undefined;
 	}, [sound]);
+	const retry=()=>{
+		setAnswers([]);
+		setCount(0);
+		setAlphabet(jumbledWords[id][gameLevel][0]);
+		setSuccess(false);
+	};
+	const nextLevel=()=>{
+		storesData(`${gamePoint+10}`);
+		setGameLevel(++gameLevel);
+		setAnswers([]);
+		setCount(0);
+		setGamePoint(gamePoint+10);
+		console.log(gameLevel);
+		setAlphabet(jumbledWords[id][gameLevel][0]);
+		setCorrect(jumbledWords[id][gameLevel][1]);
+		setSuccess(false);
+	};
+	const moveBack=()=>{
+		storesData(`${gamePoint+10}`);
+		setSuccess(false);
+		props.navigation.navigate("Dashboard");
+		setGamePoint(gamePoint+10);
+	};
 	return (
 		<View style={styles.container}>
 			<LinearGradient
@@ -97,6 +137,83 @@ const Main = (props) => {
 					alignItems: "center",
 				}}
 			>
+				<PopUp visible={success} onClose={(val)=>{setSuccess(val);}}>
+					<View style={{justifyContent:"space-evenly"}}>
+						<Text style={{
+							textAlign:"center",
+							fontSize:24,
+							fontWeight:"bold",
+							color:"green"
+						}}>Yay! you did it</Text>
+						<View style={{alignItems:"center"}}>
+							<Image
+								source={require("../../assets/coin.gif")}
+								style={{height:100,width:100}}
+							/>
+						</View>
+						<View style={{
+							flexDirection:"row",
+							alignItems:"center",
+							justifyContent:"center",
+							marginTop:20}}>
+							<Text style={{
+								fontSize:16,textAlign:"center"
+							}}>{"10 "}</Text>
+							<Image
+								source={require("../../assets/dollar.png")}
+								style={{height:30,width:30}}
+							/>
+							<Text style={{
+								fontSize:16,textAlign:"center"
+							}}>{" earned"}</Text>
+						</View>
+						<View style={{
+							flexDirection:"row",
+							justifyContent:"space-evenly",
+							marginTop:20,marginBottom:5
+						}}>
+							<Pressable
+								onPress={()=>{
+									moveBack();
+								}} style={{marginRight:15}}>
+								<Image
+									source={require("../../assets/home.png")}
+									style={{height:30,width:30}}
+								/>
+							</Pressable>
+							<Pressable
+								onPress={()=>{retry();}}
+								style={{marginRight:15,marginLeft:15}}
+							>
+								<Image
+									source={require("../../assets/retry.png")}
+									style={{height:30,width:30}}
+								/>
+							</Pressable>
+							<Pressable
+								onPress={()=>{PlaySound();}}
+								style={{marginRight:15,marginLeft:15}}
+							>
+								<Image
+									source={require("../../assets/audio.png")}
+									style={{
+										height:30,width:30,tintColor:"#050637"
+									}}
+								/>
+							</Pressable>
+							<Pressable
+								onPress={()=>{
+									nextLevel();
+								}}style={{
+									marginRight:10,marginLeft:10
+								}}>
+								<Image
+									source={require("../../assets/next.png")}
+									style={{height:30,width:30}}/>
+							</Pressable>
+						</View>
+					</View>
+				</PopUp>
 				<View
 					style={{
 						flexDirection: "row",
@@ -138,7 +255,7 @@ const Main = (props) => {
 							fontSize: 20,
 							paddingLeft: 10
 						}}>
-              3457
+							{gamePoint}
 						</Text>
 					</View>
 				</View>
@@ -212,147 +329,6 @@ const Main = (props) => {
 							</TouchableOpacity>
 						))}
 					</View>
-					{success === "true" && (
-						<View style={{ flexDirection: "row", marginTop: "7%" }}>
-							<Text
-								style={{
-									fontSize: 20,
-									color: "green",
-									textAlign: "center",
-									backgroundColor: "#050637",
-									padding: 10,
-									width: "40%",
-									fontWeight: "bold",
-									borderTopLeftRadius: 25,
-									borderBottomLeftRadius: 25,
-								}}
-							>
-								{jumbledWords[id][gameLevel][8]}
-							</Text>
-							<TouchableOpacity
-								onPress={() => {
-									PlaySound();
-								}}
-							>
-								<View
-									style={{
-										backgroundColor: "#ffcc00",
-										padding: 10,
-										borderTopRightRadius: 25,
-										borderBottomRightRadius: 25,
-									}}
-								>
-									<Image
-										source={
-											require("../../assets/volume.png")
-										}
-										style={{
-											height: 30,
-											width: 30,
-											tintColor: "#050637",
-											marginLeft: 4,
-										}}
-									/>
-								</View>
-							</TouchableOpacity>
-						</View>
-					)}
-					{success === "wrong" && (
-						<View style={{ marginTop: "7%" }}>
-							<Text
-								style={{
-									fontSize: 20,
-									textAlign: "center",
-									width: "70%",
-									color: "#fc0124",
-									backgroundColor: "#050637",
-									padding: 11,
-									fontWeight: "bold",
-									borderRadius: 50,
-								}}
-							>
-								{jumbledWords[id][gameLevel][9]}
-							</Text>
-						</View>
-					)}
-				</View>
-				<View
-					style={{
-						flexDirection: "row",
-						justifyContent: "space-between",
-						width: "70%",
-						marginLeft: "5%",
-						marginBottom: "5%",
-					}}
-				>
-					<TouchableOpacity onPress={()=>{
-						setGamelevel(--gameLevel);
-						alphabets=[];
-						answeres=[];
-						setCount(0);
-						setAnswers([]);
-						setSuccess("false");
-						setAlphabet(jumbledWords[id][gameLevel][0]);
-						setCorrect(jumbledWords[id][gameLevel][1]);
-					}}>
-						<Text
-							style={{
-								fontSize: 15,
-								textAlign: "center",
-								color: "white",
-								fontWeight: "bold",
-							}}
-						>
-							{jumbledWords[id][gameLevel][6]}
-						</Text>
-					</TouchableOpacity>
-					{success === "wrong" && (
-						<TouchableOpacity onPress={()=>{
-							setGamelevel(gameLevel);
-							alphabets=[];
-							answeres=[];
-							setAnswers([]);
-							setSuccess("false");
-							setCount(0);
-							setAlphabet(jumbledWords[id][gameLevel][0]);
-							setCorrect(jumbledWords[id][gameLevel][1]);
-						}}>
-							<Text
-								style={{
-									fontSize: 15,
-									textAlign: "center",
-									color: "white",
-									fontWeight: "bold",
-								}}
-							>
-								{jumbledWords[id][gameLevel][7]}
-							</Text>
-						</TouchableOpacity>
-					)}
-					{success === "true" && (
-						<TouchableOpacity onPress={()=>{
-							setGamelevel(++gameLevel);
-							alphabets=[];
-							answeres=[];
-							setAnswers([]);
-							setSuccess("false");
-							setCount(0);
-							setAlphabet(jumbledWords[id][gameLevel][0]);
-							setCorrect(jumbledWords[id][gameLevel][1]);
-						}}>
-							<Text
-								style={{
-									fontSize: 15,
-									textAlign: "center",
-									color: "white",
-									fontWeight: "bold",
-								}}
-							>
-								{jumbledWords[id][gameLevel][5]}
-							</Text>
-						</TouchableOpacity>
-					)}
-
 				</View>
 			</LinearGradient>
 		</View>
